@@ -5,7 +5,7 @@
   "bin": "bin/createNodejsApp.js",
   "main": "src/index.js",
   "author  of setup": "Hagop Jamkojian <hagopj13@gmail.com>",
-  "author of dev and prod" : "Moh Amilin <amilinmoh99@gmail.com>",
+  "author of dev and prod": "Moh Amilin <amilinmoh99@gmail.com>",
   "repository": "https://github.com/mohamilin/lbc-app.git",
   "license": "MIT",
   "engines": {
@@ -55,6 +55,7 @@
     "cors": "^2.8.5",
     "cross-env": "^7.0.0",
     "dotenv": "^10.0.0",
+    "ejs": "^3.1.6",
     "express": "^4.17.1",
     "express-mongo-sanitize": "^2.0.0",
     "express-rate-limit": "^5.0.0",
