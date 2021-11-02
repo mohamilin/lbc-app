@@ -1,0 +1,598 @@
+<%- include('../partials/header.ejs') %> 
+<body class="pc-horizontal layout-horizontal-v2">
+	<div class="container">
+		<!-- [ Pre-loader ] start -->
+		<div class="loader-bg">
+			<div class="loader-track">
+				<div class="loader-fill"></div>
+			</div>
+		</div>
+		<!-- [ Pre-loader ] End -->
+		<!-- [ Mobile header ] start -->
+		<div class="pc-mob-header pc-header">
+			<div class="pcm-logo">
+				<img src="/backend/assets/images/logo.svg" alt="" class="logo logo-lg">
+			</div>
+			<div class="pcm-toolbar">
+				<a href="#!" class="pc-head-link" id="mobile-collapse">
+					<div class="hamburger hamburger--arrowturn">
+						<div class="hamburger-box">
+							<div class="hamburger-inner"></div>
+						</div>
+					</div>
+				</a>
+				<a href="#!" class="pc-head-link" id="headerdrp-collapse">
+					<i data-feather="align-right"></i>
+				</a>
+				<a href="#!" class="pc-head-link" id="header-collapse">
+					<i data-feather="more-vertical"></i>
+				</a>
+			</div>
+		</div>
+		<!-- [ Mobile header ] End -->
+		<!-- [ Header ] start -->
+		<%- include('../partials/navbar.ejs') %>
+		<!-- [ Header ] end -->
+		<!-- [ navigation menu ] start -->
+		<%- include('../partials/menu.ejs') %>
+		<!-- [ navigation menu ] end -->
+		<!-- Modal -->
+		<div class="modal notification-modal fade" id="notification-modal" tabindex="-1" role="dialog" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-body">
+						<button type="button" class="btn-close float-end" data-bs-dismiss="modal" aria-label="Close">
+						</button>
+						<ul class="nav nav-pill tabs-light mb-3" id="pc-noti-tab" role="tablist">
+							<li class="nav-item">
+								<a class="nav-link active" id="pc-noti-home-tab" data-bs-toggle="pill" href="#pc-noti-home" role="tab" aria-controls="pc-noti-home" aria-selected="true">Notification</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" id="pc-noti-news-tab" data-bs-toggle="pill" href="#pc-noti-news" role="tab" aria-controls="pc-noti-news" aria-selected="false">News<span
+										class="bg-danger ms-2 d-none d-sm-inline-block">4</span></a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" id="pc-noti-settings-tab" data-bs-toggle="pill" href="#pc-noti-settings" role="tab" aria-controls="pc-noti-settings" aria-selected="false">Setting<span
+										class="bg-success ms-2 d-none d-sm-inline-block">Update</span></a>
+							</li>
+						</ul>
+						<div class="tab-content pt-4" id="pc-noti-tabContent">
+							<div class="tab-pane fade show active" id="pc-noti-home" role="tabpanel" aria-labelledby="pc-noti-home-tab">
+								<div class="media">
+									<img src="assets/images/user/avatar-1.jpg" alt="images" class="img-fluid avtar avtar-l">
+									<div class="media-body ms-3 align-self-center">
+										<div class="float-end">
+											<div class="btn-group card-option">
+												<button type="button" class="btn shadow-none">
+													<i data-feather="heart" class="text-danger"></i>
+												</button>
+												<button type="button" class="btn shadow-none px-0 dropdown-toggle arrow-none" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+													<i data-feather="more-horizontal"></i>
+												</button>
+												<div class="dropdown dropdown-menu dropdown-menu-end">
+													<a class="dropdown-item" href="#!"><i data-feather="refresh-cw"></i> reload</a>
+													<a class="dropdown-item" href="#!"><i data-feather="trash"></i> remove</a>
+												</div>
+											</div>
+										</div>
+										<h6 class="mb-0 d-inline-block">Ashoka T.</h6>
+										<p class="mb-0 d-inline-block"> • 06/20/2019 at 6:43 PM </p>
+										<p class="my-3">Cras sit amet nibh libero in gravida nulla Nulla vel metus scelerisque ante sollicitudin.</p>
+										<div class="p-3 mb-3 border rounded">
+											<div class="media align-items-center">
+												<div class="media-body">
+													<h6 class="mb-1">Death Star original maps and blueprint.pdf</h6>
+													<p class="mb-0">by Ashoka T. • 06/20/2019 at 6:43 PM </p>
+												</div>
+												<div class="btn-group d-none d-sm-inline-flex">
+													<button type="button" class="btn shadow-none">
+														<i data-feather="download-cloud"></i>
+													</button>
+													<button type="button" class="btn shadow-none px-0 dropdown-toggle arrow-none" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+														<i data-feather="more-horizontal"></i>
+													</button>
+													<div class="dropdown dropdown-menu dropdown-menu-end">
+														<a class="dropdown-item" href="#!"><i data-feather="refresh-cw"></i> reload</a>
+														<a class="dropdown-item" href="#!"><i data-feather="trash"></i> remove</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<hr class="mb-4">
+								<div class="media">
+									<img src="assets/images/user/avatar-2.jpg" alt="images" class="img-fluid avtar avtar-l">
+									<div class="media-body ms-3 align-self-center">
+										<div class="float-end">
+											<div class="btn-group card-option">
+												<button type="button" class="btn shadow-none px-0 dropdown-toggle arrow-none" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+													<i data-feather="more-horizontal"></i>
+												</button>
+												<div class="dropdown dropdown-menu dropdown-menu-end">
+													<a class="dropdown-item" href="#!"><i data-feather="refresh-cw"></i> reload</a>
+													<a class="dropdown-item" href="#!"><i data-feather="trash"></i> remove</a>
+												</div>
+											</div>
+										</div>
+										<h6 class="mb-0 d-inline-block">Ashoka T.</h6>
+										<p class="mb-0 d-inline-block"> • 06/20/2019 at 6:43 PM </p>
+										<p class="my-3">Cras sit amet nibh libero in gravida nulla Nulla vel metus scelerisque ante sollicitudin.</p>
+										<img src="assets/images/slider/img-slide-3.jpg" alt="images" class="img-fluid wid-90 rounded m-r-10 m-b-10">
+										<img src="assets/images/slider/img-slide-7.jpg" alt="images" class="img-fluid wid-90 rounded m-r-10 m-b-10">
+									</div>
+								</div>
+								<hr class="mb-4">
+								<div class="media mb-3">
+									<img src="assets/images/user/avatar-3.jpg" alt="images" class="img-fluid avtar avtar-l">
+									<div class="media-body ms-3 align-self-center">
+										<div class="float-end">
+											3 <i data-feather="heart" class="text-danger"></i>
+										</div>
+										<h6 class="mb-0 d-inline-block">Ashoka T.</h6>
+										<p class="mb-0 d-inline-block"> • 06/20/2019 at 6:43 PM </p>
+										<p class="my-3">Nulla vitae elit libero, a pharetra augue. Aenean lacinia bibendum nulla sed consectetur.</p>
+									</div>
+								</div>
+							</div>
+							<div class="tab-pane fade" id="pc-noti-news" role="tabpanel" aria-labelledby="pc-noti-news-tab">
+								<div class="pb-3 border-bottom mb-3 media">
+									<a href="#!"><img src="assets/images/news/img-news-2.jpg" class="wid-90 rounded" alt="..."></a>
+									<div class="media-body ms-3">
+										<p class="float-end mb-0 text-success"><small>now</small></p>
+										<a href="#!">
+											<h6>This is a news image</h6>
+										</a>
+										<p class="mb-2">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.</p>
+									</div>
+								</div>
+								<div class="pb-3 border-bottom mb-3 media">
+									<a href="#!"><img src="assets/images/news/img-news-1.jpg" class="wid-90 rounded" alt="..."></a>
+									<div class="media-body ms-3">
+										<p class="float-end mb-0 text-muted"><small>3 mins ago</small></p>
+										<a href="#!">
+											<h6>Industry's standard dummy</h6>
+										</a>
+										<p class="mb-2">Lorem Ipsum is simply dummy text of the printing and typesetting.</p>
+										<a href="#!" class="bg-light">Html</a>
+										<a href="#!" class="bg-light">UI/UX designed</a>
+									</div>
+								</div>
+								<div class="pb-3 border-bottom mb-3 media">
+									<a href="#!"><img src="assets/images/news/img-news-2.jpg" class="wid-90 rounded" alt="..."></a>
+									<div class="media-body ms-3">
+										<p class="float-end mb-0 text-muted"><small>5 mins ago</small></p>
+										<a href="#!">
+											<h6>Ipsum has been the industry's</h6>
+										</a>
+										<p class="mb-2">Lorem Ipsum is simply dummy text of the printing and typesetting.</p>
+										<a href="#!" class="bg-light">JavaScript</a>
+										<a href="#!" class="bg-light">Scss</a>
+									</div>
+								</div>
+							</div>
+							<div class="tab-pane fade" id="pc-noti-settings" role="tabpanel" aria-labelledby="pc-noti-settings-tab">
+								<h6 class="mt-2"><i data-feather="monitor" class="me-2"></i>Desktop settings</h6>
+								<hr>
+								<div class="custom-control custom-switch">
+									<input type="checkbox" class="custom-control-input" id="pcsetting1" checked>
+									<label class="custom-control-label f-w-600 pl-1" for="pcsetting1">Allow desktop notification</label>
+								</div>
+								<p class="text-muted ms-5">you get lettest content at a time when data will updated</p>
+								<div class="custom-control custom-switch">
+									<input type="checkbox" class="custom-control-input" id="pcsetting2">
+									<label class="custom-control-label f-w-600 pl-1" for="pcsetting2">Store Cookie</label>
+								</div>
+								<h6 class="mb-0 mt-5"><i data-feather="save" class="me-2"></i>Application settings</h6>
+								<hr>
+								<div class="custom-control custom-switch">
+									<input type="checkbox" class="custom-control-input" id="pcsetting3">
+									<label class="custom-control-label f-w-600 pl-1" for="pcsetting3">Backup Storage</label>
+								</div>
+								<p class="text-muted mb-4 ms-5">Automaticaly take backup as par schedule</p>
+								<div class="custom-control custom-switch">
+									<input type="checkbox" class="custom-control-input" id="pcsetting4">
+									<label class="custom-control-label f-w-600 pl-1" for="pcsetting4">Allow guest to print file</label>
+								</div>
+								<h6 class="mb-0 mt-5"><i data-feather="cpu" class="me-2"></i>System settings</h6>
+								<hr>
+								<div class="custom-control custom-switch">
+									<input type="checkbox" class="custom-control-input" id="pcsetting5" checked>
+									<label class="custom-control-label f-w-600 pl-1" for="pcsetting5">View other user chat</label>
+								</div>
+								<p class="text-muted ms-5">Allow to show public user message</p>
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-light-danger btn-sm" data-bs-dismiss="modal">Close</button>
+						<button type="button" class="btn btn-light-primary btn-sm">Save changes</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- [ Header ] end -->
+
+<!-- [ Main Content ] start -->
+<div class="pc-container">
+    <div class="pcoded-content">
+        <!-- [ breadcrumb ] start -->
+        <div class="page-header">
+            <div class="page-block">
+                <div class="row align-items-center">
+                    <div class="col-md-12">
+                        <div class="page-header-title">
+                            <h5 class="m-b-10">Kelas Saya</h5>
+                        </div>
+                        <ul class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                            <li class="breadcrumb-item"><a href="/kelas_saya">Kelas</a></li>
+                            <li class="breadcrumb-item">Detail Kelas</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- [ breadcrumb ] end -->
+        <!-- [ Main Content ] start -->
+        <div class="row">
+            <!-- subscribe start -->
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h5>Nama Kelas</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <div class="nav flex-column nav-pills mb-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                                    <a class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Computer Science</a>
+                                    <!-- <a class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Management and Commerce</a>
+                                    <a class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Pharmacy</a>
+                                    <a class="nav-link" id="v-pills-Seating-tab" data-bs-toggle="pill" href="#v-pills-Seating" role="tab" aria-controls="v-pills-Seating" aria-selected="false">Engineering</a>
+                                    <a class="nav-link" id="v-pills-Results-tab" data-bs-toggle="pill" href="#v-pills-Results" role="tab" aria-controls="v-pills-Results" aria-selected="false">Science</a> -->
+                                </div>
+                            </div>
+                            <div class="col-sm-9">
+                                <div class="tab-content" id="v-pills-tabContent">
+                                    <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+                                        <h5>Master of Computer Applications</h5>
+                                        <hr>
+                                        <h5 class="text-primary">Eligibility Criteria</h5>
+                                        <ul>
+                                            <li>A candidate shall have passed the qualifying examination with minimum of 50% marks (45% marks in case SC/ST/OBC category) of grand total.</li>
+                                            <li>A candidate shall have passed the Higher Secondary School Examination (Standard XII, 10+2 pattern) and Bachelor's degree with Mathematics or Business Mathematics or Statistics as one of the subjects.</li>
+                                            <li>A candidate shall have appeared in the CMAT (Common Management Aptitude Test) as prescribed by AICTE.</li>
+                                        </ul>
+                                        <h5 class="text-primary">Intake</h5>
+                                        <p>300 Seats</p>
+                                        <h5 class="text-primary">Duration</h5>
+                                        <p>The duration of the course shall be Full time three academic years (i.e. 6 semesters).</p>
+										<br>
+										<!-- discuss -->
+										<div class="card-body">
+										<div class="row justify-content-between mb-4">
+											<div class="col-auto"><a href="#!" class="text-muted text-h-primary">Diskusi
+													(50)</a></div>
+											<!-- <div class="col-auto"><a href="#!" class="text-muted text-h-primary">See All</a>
+											</div> -->
+										</div>
+										<div class="media mb-0">
+											<img src="/backend/assets/images/user/avatar-2.jpg" alt="user image"
+												class="img-radius wid-30 hei-30 align-top m-r-15">
+											<div class="media-body">
+												<a href="#!">
+													<h6 class="mb-0 text-h-primary">Alex Thompson</h6>
+												</a>
+												<p class="m-b-0">Looking Very nice type and scrambled
+													<!-- <a href="#!" class="text-muted text-h-danger ms-1"><small>Like</small></a> -->
+													<!-- <a href="#!"
+														class="text-muted text-h-primary ms-1"><small>Comment</small></a> -->
+												</p>
+											</div>
+										</div>
+										<hr>
+										<div class="media mb-0">
+											<img src="/backend/assets/images/user/avatar-3.jpg" alt="user image"
+												class="img-radius wid-30 hei-30 align-top m-r-15">
+											<div class="media-body">
+												<a href="#!">
+													<h6 class="mb-0 text-h-primary">Alex Thompson</h6>
+												</a>
+												<p class="m-b-0">Nice Pic printing and typesetting industry
+													<!-- <a href="#!" class="text-muted text-h-danger ms-1"><small>Like</small></a> -->
+													<!-- <a href="#!"
+														class="text-muted text-h-primary ms-1"><small>Comment</small></a> -->
+												</p>
+											</div>
+										</div>
+										<hr>
+										<div class="media mb-0">
+											<img src="/backend/assets/images/user/avatar-1.jpg" alt="user image"
+												class="img-radius wid-40 hei-40 align-top m-r-15">
+											<div class="media-body">
+												<div class="input-group mb-3">
+													<input type="text"
+														class="form-control form-control border-0 shadow-none px-0"
+														placeholder="Balas diskusi. . .">
+													<div class="input-group-append">
+														<button class="btn  btn-primary" type="button"><i
+																class="feather icon-message-circle"></i></button>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+										<!-- end discus -->
+                                    </div>
+                                    <!-- <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+                                        <h5>Master of Business Administration</h5>
+                                        <hr>
+                                        <h5 class="text-primary">Eligibility Criteria</h5>
+                                        <ul>
+                                            <li>Any Graduate with 50% marks (45% for reserved category) and CMAT/CAT/MAT or any other relevant entrant test for management program.</li>
+                                        </ul>
+                                        <h5 class="text-primary">Intake</h5>
+                                        <p>200 Seats</p>
+                                        <h5 class="text-primary">Duration</h5>
+                                        <p>2 years</p>
+                                    </div>
+                                    <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+                                        <h5>Bachelor of Pharmacy</h5>
+                                        <hr>
+                                        <h5 class="text-primary">Eligibility Criteria</h5>
+                                        <ul>
+                                            <li>12th passed in Science Stream (as per UGC norms)</li>
+                                        </ul>
+                                        <h5 class="text-primary">Intake</h5>
+                                        <p>100 Seats</p>
+                                        <h5 class="text-primary">Duration</h5>
+                                        <p>The duration of the course shall be full time four academic years. Each academic year shall be divided into two semesters.</p>
+                                    </div>
+                                    <div class="tab-pane fade" id="v-pills-Seating" role="tabpanel" aria-labelledby="v-pills-Seating-tab">
+                                        <h5>Diploma Engineering</h5>
+                                        <hr>
+                                        <h5 class="text-primary">Eligibility Criteria</h5>
+                                        <ul>
+                                            <li>10th(Minimum)</li>
+                                        </ul>
+                                        <h5 class="text-primary">Intake</h5>
+                                        <p>60 Seats</p>
+                                        <h5 class="text-primary">Duration</h5>
+                                        <p>The duration of the course shall be full time four academic years. Each academic year shall be divided into two semesters.</p>
+                                    </div>
+                                    <div class="tab-pane fade" id="v-pills-Results" role="tabpanel" aria-labelledby="v-pills-Results-tab">
+                                        <h5>Bachelor of Science in Chemistry</h5>
+                                        <hr>
+                                        <h5 class="text-primary">Eligibility Criteria</h5>
+                                        <ul>
+                                            <li>H. Sc (Science) of A, B or AB group</li>
+                                        </ul>
+                                        <h5 class="text-primary">Intake</h5>
+                                        <p>100 Seats</p>
+                                        <h5 class="text-primary">Duration</h5>
+                                        <p>The duration of the course shall be full time three academic years (i.e. 6 semesters). Student will receive degree of B.Sc. on completion of 3rd year successfully.</p>
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- subscribe end -->
+        </div>
+        <!-- [ Main Content ] end -->
+    </div>
+</div>
+<!-- [ Main Content ] end -->
+    <!-- Warning Section start -->
+    <!-- Older IE warning message -->
+    <!--[if lt IE 11]>
+        <div class="ie-warning">
+            <h1>Warning!!</h1>
+            <p>You are using an outdated version of Internet Explorer, please upgrade
+               <br/>to any of the following web browsers to access this website.
+            </p>
+            <div class="iew-container">
+                <ul class="iew-download">
+                    <li>
+                        <a href="http://www.google.com/chrome/">
+                            <img src="assets/images/browser/chrome.png" alt="Chrome">
+                            <div>Chrome</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.mozilla.org/en-US/firefox/new/">
+                            <img src="assets/images/browser/firefox.png" alt="Firefox">
+                            <div>Firefox</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://www.opera.com">
+                            <img src="assets/images/browser/opera.png" alt="Opera">
+                            <div>Opera</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.apple.com/safari/">
+                            <img src="assets/images/browser/safari.png" alt="Safari">
+                            <div>Safari</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">
+                            <img src="assets/images/browser/ie.png" alt="">
+                            <div>IE (11 & above)</div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <p>Sorry for the inconvenience!</p>
+        </div>
+    <![endif]-->
+    <!-- Warning Section Ends -->
+    <!-- Required Js -->
+    <!-- <script src="assets/js/vendor-all.min.js"></script>
+    <script src="assets/js/plugins/bootstrap.min.js"></script>
+    <script src="assets/js/plugins/feather.min.js"></script>
+    <script src="assets/js/pcoded.js"></script> -->
+<%- include('../partials/scripts.ejs') %> 
+<div class="pct-customizer">
+    <div class="pct-c-btn">
+        <button class="btn btn-light-danger" id="pct-toggler">
+            <i data-feather="settings"></i>
+        </button>
+        <button class="btn btn-light-primary" data-bs-toggle="tooltip" title="Document" data-placement="left">
+            <i data-feather="book"></i>
+        </button>
+        <button class="btn btn-light-success" data-bs-toggle="tooltip" title="Buy Now" data-placement="left">
+            <i data-feather="shopping-bag"></i>
+        </button>
+        <button class="btn btn-light-info" data-bs-toggle="tooltip" title="Support" data-placement="left">
+            <i data-feather="headphones"></i>
+        </button>
+    </div>
+    <div class="pct-c-content ">
+        <div class="pct-header bg-primary">
+            <h5 class="mb-0 text-white f-w-500">DashboardKit Customizer</h5>
+        </div>
+        <div class="pct-body">
+            <h6 class="mt-2"><i data-feather="credit-card" class="me-2"></i>Header settings</h6>
+            <hr class="my-2">
+            <div class="theme-color header-color">
+                <a href="#!" class="" data-value="bg-default"><span></span><span></span></a>
+                <a href="#!" class="" data-value="bg-primary"><span></span><span></span></a>
+                <a href="#!" class="" data-value="bg-danger"><span></span><span></span></a>
+                <a href="#!" class="" data-value="bg-warning"><span></span><span></span></a>
+                <a href="#!" class="" data-value="bg-info"><span></span><span></span></a>
+                <a href="#!" class="" data-value="bg-success"><span></span><span></span></a>
+                <a href="#!" class="" data-value="bg-dark"><span></span><span></span></a>
+            </div>
+            <h6 class="mt-4"><i data-feather="layout" class="me-2"></i>Sidebar settings</h6>
+            <hr class="my-2">
+            <div class="form-check form-switch">
+                <input type="checkbox" class="form-check-input" id="cust-sidebar">
+                <label class="form-check-label f-w-600 pl-1" for="cust-sidebar">Light Sidebar</label>
+            </div>
+            <div class="form-check form-switch mt-2">
+                <input type="checkbox" class="form-check-input" id="cust-sidebrand">
+                <label class="form-check-label f-w-600 pl-1" for="cust-sidebrand">Color Brand</label>
+            </div>
+            <div class="theme-color brand-color d-none">
+                <a href="#!" class="active" data-value="bg-primary"><span></span><span></span></a>
+                <a href="#!" class="" data-value="bg-danger"><span></span><span></span></a>
+                <a href="#!" class="" data-value="bg-warning"><span></span><span></span></a>
+                <a href="#!" class="" data-value="bg-info"><span></span><span></span></a>
+                <a href="#!" class="" data-value="bg-success"><span></span><span></span></a>
+                <a href="#!" class="" data-value="bg-dark"><span></span><span></span></a>
+            </div>
+            <h6 class="mt-4"><i data-feather="sun" class="me-2"></i>Layout settings</h6>
+            <hr class="my-2">
+            <div class="form-check form-switch mt-2">
+                <input type="checkbox" class="form-check-input" id="cust-darklayout">
+                <label class="form-check-label f-w-600 pl-1" for="cust-darklayout">Dark Layout</label>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- <script>
+    feather.replace();
+    var pctoggle = document.querySelector("#pct-toggler");
+    if (pctoggle) {
+        pctoggle.addEventListener('click', function () {
+            if (!document.querySelector(".pct-customizer").classList.contains('active')) {
+                document.querySelector(".pct-customizer").classList.add("active");
+            } else {
+                document.querySelector(".pct-customizer").classList.remove("active");
+            }
+        });
+    }
+
+    var custsidebrand = document.querySelector("#cust-sidebrand");
+    custsidebrand.addEventListener('click', function () {
+        if (custsidebrand.checked) {
+            document.querySelector(".m-header").classList.add("bg-dark");
+            document.querySelector(".theme-color.brand-color").classList.remove("d-none");
+        } else {
+            removeClassByPrefix(document.querySelector(".m-header"), 'bg-');
+            // document.querySelector(".m-header > .b-brand > .logo-lg").setAttribute('src', 'assets/images/logo-dark.svg');
+            document.querySelector(".theme-color.brand-color").classList.add("d-none");
+        }
+    });
+
+
+    var brandcolor = document.querySelectorAll(".brand-color > a");
+    for (var t = 0; t < brandcolor.length; t++) {
+        var c = brandcolor[t];
+        c.addEventListener('click', function (event) {
+            var targetElement = event.target;
+            if (targetElement.tagName == "SPAN") {
+                targetElement = targetElement.parentNode;
+            }
+            var temp = targetElement.getAttribute('data-value');
+            if (temp == "bg-default") {
+                removeClassByPrefix(document.querySelector(".m-header"), 'bg-');
+            } else {
+                removeClassByPrefix(document.querySelector(".m-header"), 'bg-');
+                document.querySelector(".m-header > .b-brand > .logo-lg").setAttribute('src', 'assets/images/logo.svg');
+                document.querySelector(".m-header").classList.add(temp);
+            }
+        });
+    }
+
+
+    var headercolor = document.querySelectorAll(".header-color > a");
+    for (var h = 0; h < headercolor.length; h++) {
+        var c = headercolor[h];
+
+        c.addEventListener('click', function (event) {
+            var targetElement = event.target;
+            if (targetElement.tagName == "SPAN") {
+                targetElement = targetElement.parentNode;
+            }
+            var temp = targetElement.getAttribute('data-value');
+            if (temp == "bg-default") {
+                removeClassByPrefix(document.querySelector(".pc-header:not(.pc-mob-header)"), 'bg-');
+            } else {
+                removeClassByPrefix(document.querySelector(".pc-header:not(.pc-mob-header)"), 'bg-');
+                document.querySelector(".pc-header:not(.pc-mob-header)").classList.add(temp);
+            }
+        });
+    }
+
+
+    var custside = document.querySelector("#cust-sidebar");
+    custside.addEventListener('click', function () {
+        if (custside.checked) {
+            document.querySelector(".pc-sidebar").classList.add("light-sidebar");
+            // document.querySelector(".pc-horizontal .topbar").classList.add("light-sidebar");
+        } else {
+            document.querySelector(".pc-sidebar").classList.remove("light-sidebar");
+            // document.querySelector(".pc-horizontal .topbar").classList.remove("light-sidebar");
+        }
+    });
+
+
+    var custdarklayout = document.querySelector("#cust-darklayout");
+    custdarklayout.addEventListener('click', function () {
+        if (custdarklayout.checked) {
+            document.querySelector("#main-style-link").setAttribute('href', 'assets/css/style-dark.css');
+        } else {
+            document.querySelector("#main-style-link").setAttribute('href', 'assets/css/style.css');
+        }
+    });
+    function removeClassByPrefix(node, prefix) {
+        for (let i = 0; i < node.classList.length; i++) {
+            let value = node.classList[i];
+            if (value.startsWith(prefix)) {
+                node.classList.remove(value);
+            }
+        }
+    }
+</script>
+</body>
+
+</html> -->
