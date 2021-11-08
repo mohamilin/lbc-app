@@ -116,35 +116,37 @@
 
                 <!-- === Contact Form === -->
                 <div class="col-md-4 col-sm-12 p-bottom-30">
+                    
                     <div class="contact-form row" style="padding: 30px ;background-color: white">
+                        <%- include('./partials/message.ejs') %> 
                         <center></frontend/img/ src="/frontend/img//logo-halaka.png" class=" wow fadeInDown p-bottom-30 text-center" data-wow-duration="1s" data-wow-delay="0.6s" style="width: 75%" /></center>
 
-                        <form name="ajax-form" id="ajax-form" action="contact.php" method="post">
+                        <form action="/action/register" method="POST">
                             <div class="col-sm-12 contact-form-item wow zoomIn">
-                                <input name="nama" id="name" type="text"   placeholder="Nama *"/>
-                                <span class="error" id="err-name">Masukkan Nama  Anda</span>
+                                <input name="name" id="name" type="text"   placeholder="Nama *"/>
+                                <!-- <span class="error" id="err-name">Masukkan Nama  Anda</span> -->
                             </div>
-                            <div class="col-sm-12 contact-form-item wow zoomIn">
+                            <div class="col-sm-12 contact-form-item wow zoomIn" hidden>
                                 <input name="no_hp" id="name" type="text"   placeholder="No HP *"/>
-                                <span class="error" id="err-name">Masukkan No Hp Anda</span>
+                                <!-- <span class="error" id="err-name">Masukkan No Hp Anda</span> -->
                             </div>
                             <div class="col-sm-12 contact-form-item wow zoomIn">
                                 <input name="email" id="email" type="text"  placeholder="E-Mail *"/>
                                 <span class="error" id="err-email">Masukkan Email Anda</span>
-                                <span class="error" id="err-emailvld">e-mail is not a valid format</span>
+                                <!-- <span class="error" id="err-emailvld">e-mail is not a valid format</span> -->
                             </div>
                             <div class="col-sm-12 contact-form-item wow zoomIn">
                                 <input name="password" id="name" type="password"   placeholder="Password *"/>
-                                <span class="error" id="err-name">pMasukkan Password Anda</span>
+                                <!-- <span class="error" id="err-name">Masukkan Password Anda</span> -->
                             </div>
                             <div class="col-sm-12 contact-form-item">
-                                <button class="send_message col-sm-12 btn btn-main btn-theme wow fadeInUp" id="send" data-lang="en">Daftar</button>                
+                                <button type="submit" class="send_message col-sm-12 btn btn-main btn-theme wow fadeInUp" id="send" data-lang="en">Daftar</button>                
                             </div>
                             <center><a href="/login">LOGIN</a></center>
-                            <div class="clear"></div>   
+                            <!-- <div class="clear"></div>   
                             <div class="error text-align-center" id="err-form">There was a problem validating the form please check!</div>
                             <div class="error text-align-center" id="err-timedout">The connection to the server timed out!</div>
-                            <div class="error" id="err-state"></div>
+                            <div class="error" id="err-state"></div> -->
                         </form> 
                                     
                         <div class="clearfix"></div>
@@ -198,12 +200,12 @@
     <script src="/frontend/js/imagesloaded.pkgd.min.js"></script>
     <script src="/frontend/js/isotope.pkgd.min.js"></script>
     <script src="/frontend/js/jquery.mb.YTPlayer.js"></script>
-    <script src="/frontend/js/retina.min.js"></script>
+    <!-- <script src="/frontend/js/retina.min.js"></script> -->
     <script src="/frontend/js/wow.min.js"></script>
     <script src="/frontend/inc/owlcarousel/js/owl.carousel.min.js"></script>
 
     <!-- Contact Form -->
-    <script src="/frontend/js/contact.js"></script>
+    <!-- <script src="/frontend/js/contact.js"></script> -->
     
     <!-- Custom Plugin -->
     <script src="/frontend/js/custom.js"></script>

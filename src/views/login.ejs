@@ -118,19 +118,19 @@
                 <div class="col-md-4 col-sm-12 p-bottom-30">
                     <div class="contact-form row" style="padding: 30px ;background-color: white">
                         <center><img src="/frontend/img/logo-halaka.png" class=" wow fadeInDown p-bottom-30 text-center" data-wow-duration="1s" data-wow-delay="0.6s" style="width: 75%" /></center>
-
-                        <form name="ajax-form" id="ajax-form" action="contact.php" method="post">
+                        <%- include('./partials/message.ejs') %> 
+                        <form action="/action/login" method="post">
                             <div class="col-sm-12 contact-form-item wow zoomIn">
                                 <input name="email" id="email" type="text"  placeholder="E-Mail *"/>
-                                <span class="error" id="err-email">please enter e-mail</span>
-                                <span class="error" id="err-emailvld">e-mail is not a valid format</span>
+                                <!-- <span class="error" id="err-email">please enter e-mail</span>
+                                <span class="error" id="err-emailvld">e-mail is not a valid format</span> -->
                             </div>
                             <div class="col-sm-12 contact-form-item wow zoomIn">
-                                <input name="name" id="name" type="password"   placeholder="Password *"/>
-                                <span class="error" id="err-name">please enter password</span>
+                                <input name="password" id="name" type="password"   placeholder="Password *"/>
+                                <!-- <span class="error" id="err-name">please enter password</span> -->
                             </div>
                             <div class="col-sm-12 contact-form-item">
-                                <button class="send_message col-sm-12 btn btn-main btn-theme wow fadeInUp" id="send" data-lang="en">Masuk</button>                
+                                <button type="submit" class="send_message col-sm-12 btn btn-main btn-theme wow fadeInUp" id="send" data-lang="en">Masuk</button>                
                             </div>
                             <center><a href="/register">DAFTAR</a></center>
                             <div class="clear"></div>   
@@ -195,7 +195,7 @@
     <script src="/frontend/inc/owlcarousel/js/owl.carousel.min.js"></script>
 
     <!-- Contact Form -->
-    <script src="/frontend/js/contact.js"></script>
+    <!-- <script src="/frontend/js/contact.js"></script> -->
     
     <!-- Custom Plugin -->
     <script src="/frontend/js/custom.js"></script>
