@@ -4,6 +4,9 @@ const xss = require('xss-clean');
 const mongoSanitize = require('express-mongo-sanitize');
 const compression = require('compression');
 const cors = require('cors');
+const session = require('express-session');
+const methodOverride = require('method-override');
+const flash = require('connect-flash');
 const passport = require('passport');
 const httpStatus = require('http-status');
 const path = require('path');
@@ -52,9 +55,21 @@ if (config.env === 'production') {
   app.use('/v1/auth', authLimiter);
 }
 
+// session
+app.use(
+  session({
+    secret: 'keyboard cat',
+    resave: false,
+    saveUninitialized: true,
+    cookie: { maxAge: 60000 },
+  })
+);
+
 // template engine ejs
 app.set('views', path.join(__dirname, 'views'));
+app.use(methodOverride('_method'));
 app.set('view engine', 'ejs');
+app.use(flash());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/backend', express.static(path.join(__dirname, 'public/backend')));
 app.use('/frontend', express.static(path.join(__dirname, 'public/frontend')));
