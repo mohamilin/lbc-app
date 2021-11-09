@@ -44,6 +44,10 @@ const userSchema = mongoose.Schema(
       type: Boolean,
       default: false,
     },
+    noHp: {
+      type: String,
+      unique: true,
+    },
   },
   {
     timestamps: true,
