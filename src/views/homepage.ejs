@@ -297,7 +297,7 @@
                             <i class="fa fa-users"></i>
                         </div>
                         <div class="stat-item-number">
-                            123
+                            <%= totalStudent %> 
                         </div>
                         <div class="stat-item-text">
                             Siswa
@@ -314,7 +314,7 @@
                             <i class="fa fa-book"></i>
                         </div>
                         <div class="stat-item-number">
-                            999
+                            <%= classes.length %> 
                         </div>
                         <div class="stat-item-text">
                             Kelas
@@ -349,30 +349,31 @@
                 <div id="owl-blog" class="owl-carousel owl-theme">
 
                     <!-- === Blog item 1 === -->
+                    <% for(let i = 0; i < classes.length; i++){ %>
                     <div class="blog wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.7s">
                         <!-- === Price Item 1 === --> 
                     <div class="col-md-12 col-sm-12 p-bottom-30">
                         <div class="price-item text-center wow flipInX" data-wow-delay="0.6s">
                             <div class="price-item-header">
-                                <h4>Hukum Islam</h4>
+                                <h4><%= classes[i].name %> </h4>
                             </div>
                             <div>
                                 <img src="/frontend/img/sample1.png">
                             </div>
                             <ul class="price-item-features list-unstyled">
-                                <li><p class="small">Deskripsi singkat kelas</p></li>                      
+                                <li><p class="small"><%= classes[i].shortDesc %></p></li>                      
                             </ul>
                             <div class="price-item-price">
-                                <p class="big">23<span class="currency">K</span></p>
+                                <p class="big"><%= classes[i].price %><span class="currency"></span></p>
                                 <p class="small"></p>
                             </div>
-                            <a href="detail-kelas.html" class="btn btn-main btn-transparent">Lihat Detail</a>
+                            <a href="/classes/<%= classes[i]._id %> " class="btn btn-main btn-transparent">Lihat Detail</a>
                         </div>
                     </div> <!-- /.col -->                 
                     </div> <!-- /.blog -->
-
+                    <% } %> 
                     <!-- === Blog item 2 === -->
-                    <div class="blog wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.7s">
+                    <div class="blog wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.7s" hidden>
                         <!-- === Price Item 2 === --> 
                         <div class="col-md-12 col-sm-12 p-bottom-30">
                             <div class="price-item text-center wow flipInX" data-wow-delay="0.7s">
@@ -395,7 +396,7 @@
                     </div> <!-- /.blog -->
 
                     <!-- === Blog item 3 === -->
-                    <div class="blog wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.7s">
+                    <div class="blog wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.7s" hidden>
                         <!-- === Price Item 3 === --> 
                         <div class="col-md-12 col-sm-12 p-bottom-30">
                             <div class="price-item text-center wow flipInX" data-wow-delay="0.8s">
@@ -418,7 +419,7 @@
                     </div> <!-- /.blog -->
 
                     <!-- === Blog item 4 === -->
-                    <div class="blog wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.7s">
+                    <div class="blog wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.7s" hidden>
                         <!-- === Price Item 4 === --> 
                         <div class="col-md-12 col-sm-12 p-bottom-30">
                             <div class="price-item text-center wow flipInX" data-wow-delay="0.9s">

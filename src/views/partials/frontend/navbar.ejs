@@ -33,11 +33,15 @@
                                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Kelas <span class="caret"></span></a>
                                   <ul class="dropdown-menu">
                                     <li><a href="/daftar_kelas" style="color: black">Daftar Kelas</a></li>
-                                    <li><a href="/kelas_saya" style="color: black">Kelas Saya</a></li>
+                                    <% if (user) { %>
+                                        <li><a href="/kelas_saya" style="color: black">Kelas Saya</a></li>
+                                    <% } %>
                                   </ul>
                                 </li>
                                 </li>
-                                <li><a href="/login"><button class="btn btn-main btn-theme" data-lang="en">Login</button></a></li>
+                                <% if (!user) { %>
+                                    <li><a href="/login"><button class="btn btn-main btn-theme" data-lang="en">Login</button></a></li>
+                                <% } %>
                             </ul>
 
                         </div>
