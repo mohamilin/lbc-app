@@ -1,7 +1,8 @@
 const { Router } = require('express');
-const { createTopic } = require('../../../controllers/web/topics');
+const { createTopic, viewTopicbyId } = require('../../../controllers/web/topics');
 
 const router = Router();
 
 router.post('/', createTopic);
+router.get('/:id', viewTopicbyId);
 module.exports = router;

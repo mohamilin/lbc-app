@@ -4,6 +4,8 @@ const dashboardRoute = require('./dashboard');
 const mentorRoute = require('./mentor');
 const studenRoute = require('./students');
 const topicRoute = require('./topics');
+const classRoute = require('./classes');
+const transactionRoute = require('./transactions');
 
 const router = express.Router();
 
@@ -27,6 +29,14 @@ const defaultRoutes = [
   {
     path: '/topic',
     route: topicRoute,
+  },
+  {
+    path: '/classes',
+    route: classRoute,
+  },
+  {
+    path: '/transaction',
+    route: transactionRoute,
   },
 ];
 
