@@ -46,6 +46,12 @@ const getUserByEmail = async (email) => {
   return User.findOne({ email });
 };
 
+// get user
+
+const getAllUser = async () => {
+  return User.find({ role: 'user' });
+};
+
 /**
  * Update user by id
  * @param {ObjectId} userId
@@ -84,6 +90,7 @@ module.exports = {
   queryUsers,
   getUserById,
   getUserByEmail,
+  getAllUser,
   updateUserById,
   deleteUserById,
 };

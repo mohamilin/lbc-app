@@ -5,6 +5,11 @@ const createTopic = async (title) => {
   return topic;
 };
 
+const viewTopicbyId = async (id) => {
+  const topic = await Topic.findOne({ _id: id }).populate({ path: 'Classes', select: 'name' });
+  return topic;
+};
 module.exports = {
   createTopic,
+  viewTopicbyId,
 };
