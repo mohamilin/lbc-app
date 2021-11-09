@@ -4,7 +4,8 @@ const xss = require('xss-clean');
 const mongoSanitize = require('express-mongo-sanitize');
 const compression = require('compression');
 const cors = require('cors');
-const session = require('express-session');
+// const session = require('express-session');
+const session = require('cookie-session');
 const methodOverride = require('method-override');
 const flash = require('connect-flash');
 const passport = require('passport');
@@ -62,6 +63,7 @@ app.use(
     resave: false,
     saveUninitialized: true,
     cookie: { maxAge: 60000 },
+    maxAge: 24 * 60 * 60 * 1000,
   })
 );
 
