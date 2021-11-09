@@ -50,6 +50,7 @@ const actionLogin = async (req, res) => {
       id: user._id,
       name: user.name,
       role: user.role,
+      email: user.email,
     };
     res.redirect('/kelas_saya');
   } catch (error) {
@@ -61,9 +62,15 @@ const actionLogin = async (req, res) => {
   }
 };
 
+const actionLogout = async (req, res) => {
+  req.session.destroy();
+  res.redirect('/');
+};
+
 module.exports = {
   register,
   actionRegister,
   login,
   actionLogin,
+  actionLogout,
 };
