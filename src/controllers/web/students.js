@@ -1,8 +1,7 @@
 const viewClass = async (req, res) => {
   try {
-    const { user } = req.session;
-    console.log('kelas saya user', user);
-    res.render('pages/kelas_saya', { title: 'Kelas Saya' });
+    const { name, role } = req.session.user;
+    res.render('pages/kelas_saya', { title: 'Kelas Saya', name, role });
   } catch (error) {
     console.error(error);
   }
