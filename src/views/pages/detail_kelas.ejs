@@ -240,140 +240,53 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">
-                        <h5>Nama Kelas</h5>
+                        <h5><%= dataClass.name %> </h5>
                     </div>
-                    <div class="card-body">
+                    <div class="card-body" >
                         <div class="row">
                             <div class="col-sm-3">
                                 <div class="nav flex-column nav-pills mb-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                                    <a class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Computer Science</a>
-                                    <!-- <a class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Management and Commerce</a>
-                                    <a class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Pharmacy</a>
-                                    <a class="nav-link" id="v-pills-Seating-tab" data-bs-toggle="pill" href="#v-pills-Seating" role="tab" aria-controls="v-pills-Seating" aria-selected="false">Engineering</a>
-                                    <a class="nav-link" id="v-pills-Results-tab" data-bs-toggle="pill" href="#v-pills-Results" role="tab" aria-controls="v-pills-Results" aria-selected="false">Science</a> -->
+                                    <a  class="nav-link active" id="v-pills-<%= dataClass.chapterId[0]._id %>-tab" data-bs-toggle="pill" href="#v-pills-<%= dataClass.chapterId[0]._id %>" role="tab" aria-controls="v-pills-<%= dataClass.chapterId[0]._id %>" aria-selected="true"><%= dataClass.chapterId[0].title %></a>
+                                    <% for( let i = 1; i < dataClass.chapterId.length; i++ ) { %>
+                                        <a class="nav-link" id="v-pills-<%= dataClass.chapterId[i]._id %>-tab" data-bs-toggle="pill" href="#v-pills-<%= dataClass.chapterId[i]._id %>" role="tab" aria-controls="v-pills-<%= dataClass.chapterId[i]._id %>" aria-selected="true"><%= dataClass.chapterId[i].title %></a>
+                                    <% } %>
                                 </div>
                             </div>
                             <div class="col-sm-9">
                                 <div class="tab-content" id="v-pills-tabContent">
-                                    <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
-                                        <h5>Master of Computer Applications</h5>
+                                    <div class="tab-pane fade show active" id="v-pills-<%= dataClass.chapterId[0]._id %>" role="tabpanel" aria-labelledby="v-pills-<%= dataClass.chapterId[0]._id %>-tab">
+                                        <h5><%= dataClass.chapterId[0].title %></h5>
                                         <hr>
-                                        <h5 class="text-primary">Eligibility Criteria</h5>
-                                        <ul>
-                                            <li>A candidate shall have passed the qualifying examination with minimum of 50% marks (45% marks in case SC/ST/OBC category) of grand total.</li>
-                                            <li>A candidate shall have passed the Higher Secondary School Examination (Standard XII, 10+2 pattern) and Bachelor's degree with Mathematics or Business Mathematics or Statistics as one of the subjects.</li>
-                                            <li>A candidate shall have appeared in the CMAT (Common Management Aptitude Test) as prescribed by AICTE.</li>
-                                        </ul>
-                                        <h5 class="text-primary">Intake</h5>
-                                        <p>300 Seats</p>
-                                        <h5 class="text-primary">Duration</h5>
-                                        <p>The duration of the course shall be Full time three academic years (i.e. 6 semesters).</p>
-										<br>
-										<!-- discuss -->
-										<div class="card-body">
-										<div class="row justify-content-between mb-4">
-											<div class="col-auto"><a href="#!" class="text-muted text-h-primary">Diskusi
-													(50)</a></div>
-											<!-- <div class="col-auto"><a href="#!" class="text-muted text-h-primary">See All</a>
-											</div> -->
-										</div>
-										<div class="media mb-0">
-											<img src="/backend/assets/images/user/avatar-2.jpg" alt="user image"
-												class="img-radius wid-30 hei-30 align-top m-r-15">
-											<div class="media-body">
-												<a href="#!">
-													<h6 class="mb-0 text-h-primary">Alex Thompson</h6>
-												</a>
-												<p class="m-b-0">Looking Very nice type and scrambled
-													<!-- <a href="#!" class="text-muted text-h-danger ms-1"><small>Like</small></a> -->
-													<!-- <a href="#!"
-														class="text-muted text-h-primary ms-1"><small>Comment</small></a> -->
-												</p>
-											</div>
-										</div>
-										<hr>
-										<div class="media mb-0">
-											<img src="/backend/assets/images/user/avatar-3.jpg" alt="user image"
-												class="img-radius wid-30 hei-30 align-top m-r-15">
-											<div class="media-body">
-												<a href="#!">
-													<h6 class="mb-0 text-h-primary">Alex Thompson</h6>
-												</a>
-												<p class="m-b-0">Nice Pic printing and typesetting industry
-													<!-- <a href="#!" class="text-muted text-h-danger ms-1"><small>Like</small></a> -->
-													<!-- <a href="#!"
-														class="text-muted text-h-primary ms-1"><small>Comment</small></a> -->
-												</p>
-											</div>
-										</div>
-										<hr>
-										<div class="media mb-0" >
-											<img src="/backend/assets/images/user/avatar-1.jpg" alt="user image"
-												class="img-radius wid-40 hei-40 align-top m-r-15">
-											<div class="media-body" >
-												<div class="input-group mb-3" >
-													<input type="text"
-														class="form-control form-control border-0 shadow-none px-0"
-														placeholder="Balas . . . .">
-													<div class="input-group-append" >
-														<button  class="btn btn-sm btn-primary" type="button">
-                                                            <i class="feather icon-message-circle"></i></button>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
+                                        
+                                        <% if (!dataClass.chapterId[0].lessonId.length) { %>
+                                            <h5 class="text-secondary">Tidak ada materi</h5>
+                                        <% } %>
 
-										<!-- end discus -->
+                                        <% for( let j = 0; j <  dataClass.chapterId[0].lessonId.length; j++ ) { %>
+                                                <h5 class="text-primary"><%= dataClass.chapterId[0].lessonId[j].title%></h5>
+                                                <p>
+                                                    <%= dataClass.chapterId[0].lessonId[j].description%>
+                                                </p>                                            
+                                            <% } %>
                                     </div>
-                                    <!-- <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
-                                        <h5>Master of Business Administration</h5>
-                                        <hr>
-                                        <h5 class="text-primary">Eligibility Criteria</h5>
-                                        <ul>
-                                            <li>Any Graduate with 50% marks (45% for reserved category) and CMAT/CAT/MAT or any other relevant entrant test for management program.</li>
-                                        </ul>
-                                        <h5 class="text-primary">Intake</h5>
-                                        <p>200 Seats</p>
-                                        <h5 class="text-primary">Duration</h5>
-                                        <p>2 years</p>
-                                    </div>
-                                    <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
-                                        <h5>Bachelor of Pharmacy</h5>
-                                        <hr>
-                                        <h5 class="text-primary">Eligibility Criteria</h5>
-                                        <ul>
-                                            <li>12th passed in Science Stream (as per UGC norms)</li>
-                                        </ul>
-                                        <h5 class="text-primary">Intake</h5>
-                                        <p>100 Seats</p>
-                                        <h5 class="text-primary">Duration</h5>
-                                        <p>The duration of the course shall be full time four academic years. Each academic year shall be divided into two semesters.</p>
-                                    </div>
-                                    <div class="tab-pane fade" id="v-pills-Seating" role="tabpanel" aria-labelledby="v-pills-Seating-tab">
-                                        <h5>Diploma Engineering</h5>
-                                        <hr>
-                                        <h5 class="text-primary">Eligibility Criteria</h5>
-                                        <ul>
-                                            <li>10th(Minimum)</li>
-                                        </ul>
-                                        <h5 class="text-primary">Intake</h5>
-                                        <p>60 Seats</p>
-                                        <h5 class="text-primary">Duration</h5>
-                                        <p>The duration of the course shall be full time four academic years. Each academic year shall be divided into two semesters.</p>
-                                    </div>
-                                    <div class="tab-pane fade" id="v-pills-Results" role="tabpanel" aria-labelledby="v-pills-Results-tab">
-                                        <h5>Bachelor of Science in Chemistry</h5>
-                                        <hr>
-                                        <h5 class="text-primary">Eligibility Criteria</h5>
-                                        <ul>
-                                            <li>H. Sc (Science) of A, B or AB group</li>
-                                        </ul>
-                                        <h5 class="text-primary">Intake</h5>
-                                        <p>100 Seats</p>
-                                        <h5 class="text-primary">Duration</h5>
-                                        <p>The duration of the course shall be full time three academic years (i.e. 6 semesters). Student will receive degree of B.Sc. on completion of 3rd year successfully.</p>
-                                    </div> -->
+
+                                    <% for( let i = 1; i < dataClass.chapterId.length; i++ ) { %>
+                                        <div class="tab-pane fade" id="v-pills-<%= dataClass.chapterId[i]._id %>" role="tabpanel" aria-labelledby="v-pills-<%= dataClass.chapterId[i]._id %>-tab">
+                                            <h5><%= dataClass.chapterId[i].title %></h5>
+                                            <hr>
+
+                                            <% if (!dataClass.chapterId[i].lessonId.length) { %>
+                                                <h5 class="text-secondary">Tidak ada materi</h5>
+                                            <% } %>
+
+                                            <% for( let j = 0; j <  dataClass.chapterId[i].lessonId.length; j++ ) { %>
+                                                <h5 class="text-primary"><%= dataClass.chapterId[i].lessonId[j].title%></h5>
+                                                <p>
+                                                    <%= dataClass.chapterId[i].lessonId[j].description%>
+                                                </p>                                            
+                                            <% } %>
+                                        </div>
+                                    <% } %>
                                 </div>
                             </div>
                         </div>

@@ -482,94 +482,112 @@
                 <div class="tab-content filter-data" id="myTabContent">
                     <div class="tab-pane fade show active" id="grid" role="tabpanel" aria-labelledby="grid-tab">
                         <div class="row row-cols-lg-3 row-cols-sm-6">
-                            <div class="col">
-                                <div class="card e-comm-card">
-                                    <div class="card-body position-absolute end-0 top-0">
-                                        <div class="form-check prod-likes">
-                                            <input type="checkbox" class="form-check-input">
-                                            <i data-feather="heart" class="prod-likes-icon"></i>
+                            <% for( let i = 0; i < dataClass.length; i++ ) { %>
+                                <div class="col">
+                                    <div class="card e-comm-card">
+                                        <div class="card-body position-absolute end-0 top-0">
+                                            <div class="form-check prod-likes">
+                                                <input type="checkbox" class="form-check-input">
+                                                <i data-feather="heart" class="prod-likes-icon"></i>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="card-body pb-0">
-                                        <img src="/backend/assets/images/product/e-comm-1.jpg" alt="prod img" class="img-fluid">
-                                    </div>
-                                    <div class="card-body prod-content">
-                                        <small class="text-uppercase font-weight-bold text-muted">Sceince</small>
-                                        <a href="/detail_kelas/1">
-                                            <div class="text-truncate w-100 h5">Computer Science</div>
-                                        </a>
-                                        <div>
-                                            <p class="d-inline-block mb-0 h4"><span class="text-primary">₹</span>1,499</p><small class="text-danger ms-2"><s>₹4,999</s></small> <span class="text-success f-w-500">70% off</span>
+                                        <div class="card-body pb-0">
+                                            <img src="/backend/assets/images/product/e-comm-1.jpg" alt="prod img" class="img-fluid">
                                         </div>
-                                        <div class="h-data">
-                                            <table class="table table-xs w-auto table-borderless m-0" hidden>
-                                                <tbody>
-                                                    <tr>
-                                                        <td class="pl-0 f-w-500 pb-0"><i class="material-icons-two-tone text-primary f-16">color_lens</i> Color:</td>
-                                                        <td class="pb-0">
-                                                            <span class="d-inline-block p-2 me-1 rounded-circle bg-danger"></span>
-                                                            <span class="d-inline-block p-2 me-1 rounded-circle bg-primary"></span>
-                                                            <span class="d-inline-block p-2 me-1 rounded-circle bg-success"></span>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="pl-0 f-w-500 pb-0"><i class="material-icons-two-tone text-primary f-16">games</i> Size:</td>
-                                                        <td class="pb-0">6, 7, 8, 9, 10, 11</td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
+                                        <div class="card-body prod-content">
+                                            <small class="text-uppercase font-weight-bold text-muted"><%= dataClass[i].classId.topicId.title %> </small>
+                                            <% if (dataClass[i].status === 'Sukses') { %>
+                                                <a href="/detail_kelas/<%= dataClass[i].classId._id %> ">
+                                                    <div class="text-truncate w-100 h5"><%= dataClass[i].classId.name %></div>
+                                                </a>
+                                            <% } else { %>
+                                                <div class="text-truncate w-100 h5"><%= dataClass[i].classId.name %></div>
+                                                <% } %>
+                                            <div>
+                                                <p class="d-inline-block mb-0 h4"><span class="text-primary">Rp</span><%= dataClass[i].classId.price %></p><small class="text-danger ms-2" ><s></s></small> <span class="text-danger f-w-500" ><%= dataClass[i].status %> </span>
+                                            </div>
+                                            <div class="h-data">
+                                                <table class="table table-xs w-auto table-borderless m-0" hidden>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="pl-0 f-w-500 pb-0"><i class="material-icons-two-tone text-primary f-16">color_lens</i> Color:</td>
+                                                            <td class="pb-0">
+                                                                <span class="d-inline-block p-2 me-1 rounded-circle bg-danger"></span>
+                                                                <span class="d-inline-block p-2 me-1 rounded-circle bg-primary"></span>
+                                                                <span class="d-inline-block p-2 me-1 rounded-circle bg-success"></span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="pl-0 f-w-500 pb-0"><i class="material-icons-two-tone text-primary f-16">games</i> Size:</td>
+                                                            <td class="pb-0">6, 7, 8, 9, 10, 11</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            <% } %>
                         </div>
                     </div>
                     <div class="tab-pane fade" id="list" role="tabpanel" aria-labelledby="list-tab">
                         <div class="row">
-                            <div class="col-12">
-                                <div class="card">
-                                    <div class="border-bottom">
-                                        <div class="row align-items-stretch g-0">
-                                            <div class="col-md-4">
-                                                <div class="d-flex align-items-center position-relative h-100">
-                                                    <img src="/backend/assets/images/product/e-comm-1.jpg" alt="prod img" class="img-fluid">
-                                                    <div class="card-body position-absolute end-0 top-0">
-                                                        <div class="form-check prod-likes">
-                                                            <input type="checkbox" class="form-check-input">
-                                                            <i data-feather="heart" class="prod-likes-icon"></i>
+
+                            <% for( let i = 0; i < dataClass.length; i++ ) { %>
+                                <div class="col-12">
+                                    <div class="card">
+                                        <div class="border-bottom">
+                                            <div class="row align-items-stretch g-0">
+                                                <div class="col-md-4">
+                                                    <div class="d-flex align-items-center position-relative h-100">
+                                                        <img src="/backend/assets/images/product/e-comm-1.jpg" alt="prod img" class="img-fluid">
+                                                        <div class="card-body position-absolute end-0 top-0">
+                                                            <div class="form-check prod-likes">
+                                                                <input type="checkbox" class="form-check-input">
+                                                                <i data-feather="heart" class="prod-likes-icon"></i>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div class="col-md-8">
-                                                <div class="card-body">
-                                                    <small class="text-uppercase font-weight-bold text-muted">Science</small>
-                                                    <a href="/detail_kelas/1">
-                                                        <div class="text-truncate w-100 h5">Computer Science</div>
-                                                    </a>
-                                                    <div>
-                                                        <p class="d-inline-block mb-0 h4"><span class="text-primary">₹</span>1,499</p><small class="text-danger ms-2"><s>₹4,999</s></small> <span class="text-success f-w-500">70% off</span>
+                                                <div class="col-md-8">
+                                                    <div class="card-body">
+                                                        <small class="text-uppercase font-weight-bold text-muted"><%= dataClass[i].classId.topicId.title %> </small>
+                                                        <!-- <a href="/detail_kelas/1">
+                                                            <div class="text-truncate w-100 h5"><%= dataClass[i].classId.name %>  </div>
+                                                        </a> -->
+                                                        <% if (dataClass[i].status === 'Sukses') { %>
+                                                            <a href="/detail_kelas/<%= dataClass[i].classId._id %> ">
+                                                                <div class="text-truncate w-100 h5"><%= dataClass[i].classId.name %></div>
+                                                            </a>
+                                                        <% } else { %>
+                                                            <div class="text-truncate w-100 h5"><%= dataClass[i].classId.name %></div>
+                                                            <% } %>
+
+                                                        <div>
+                                                            <p class="d-inline-block mb-0 h4"><span class="text-primary">Rp</span><%= dataClass[i].classId.price %></p><small class="text-danger ms-2" ><s></s></small> <span class="text-danger f-w-500" ><%= dataClass[i].status %> </span>
+                                                        </div>
+                                                        <p hidden class="text-truncate w-100 mt-3">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+                                                            unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries</p>
+                                                        <ul hidden class="list-inline mb-0">
+                                                            <li class="list-inline-item d-inline-flex align-items-center">
+                                                                <span class="f-w-500 me-2"><i class="material-icons-two-tone text-primary f-16">color_lens</i> Color:</span>
+                                                                <span class="d-inline-block p-2 me-1 rounded-circle bg-danger"></span>
+                                                                <span class="d-inline-block p-2 me-1 rounded-circle bg-primary"></span>
+                                                                <span class="d-inline-block p-2 me-1 rounded-circle bg-success"></span>
+                                                            </li>
+                                                            <li class="list-inline-item d-inline-flex align-items-center">
+                                                                <span class="f-w-500 me-2"><i class="material-icons-two-tone text-primary f-16">games</i> Size:</span>
+                                                                <span class="d-inline-block">6, 7, 8, 9, 10, 11</span>
+                                                            </li>
+                                                        </ul>
                                                     </div>
-                                                    <p class="text-truncate w-100 mt-3">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                                                        unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries</p>
-                                                    <ul class="list-inline mb-0">
-                                                        <li class="list-inline-item d-inline-flex align-items-center">
-                                                            <span class="f-w-500 me-2"><i class="material-icons-two-tone text-primary f-16">color_lens</i> Color:</span>
-                                                            <span class="d-inline-block p-2 me-1 rounded-circle bg-danger"></span>
-                                                            <span class="d-inline-block p-2 me-1 rounded-circle bg-primary"></span>
-                                                            <span class="d-inline-block p-2 me-1 rounded-circle bg-success"></span>
-                                                        </li>
-                                                        <li class="list-inline-item d-inline-flex align-items-center">
-                                                            <span class="f-w-500 me-2"><i class="material-icons-two-tone text-primary f-16">games</i> Size:</span>
-                                                            <span class="d-inline-block">6, 7, 8, 9, 10, 11</span>
-                                                        </li>
-                                                    </ul>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            <% } %>
+
                         </div>
                     </div>
                 </div>

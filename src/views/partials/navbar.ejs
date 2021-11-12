@@ -8,7 +8,7 @@
                     <h2 style="color:white;" class="logo logo-l">LOGO</h2>
                 </a>
             </div>
-            <div class="me-auto pc-mob-drp">
+            <div class="me-auto pc-mob-drp" hidden>
                 <ul class="list-unstyled">
                     <li class="dropdown pc-h-item">
                         <a class="pc-head-link active dropdown-toggle arrow-none me-0" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
@@ -88,19 +88,19 @@
                             <img src="/backend/assets/images/user/avatar-2.jpg" alt="user-image" class="user-avtar">
                             <span>
                                 <span class="user-name"><%= name.toUpperCase() %> </span>
-                                <span class="user-desc"><%= role.toUpperCase() %> </span>
+                                <span hidden class="user-desc"><%= role.toUpperCase() %> </span>
                             </span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-end pc-h-dropdown">
                             <div class=" dropdown-header">
-                                <h5 class="text-overflow m-0"><span class="badge bg-light-success">Pro</span></h5>
+                                <h5 class="text-overflow m-0"><span class="badge bg-light-success"><%= role.toUpperCase() %></span></h5>
                             </div>
-                            <a href="user-profile.html" class="dropdown-item">
+                            <a hidden href="user-profile.html" class="dropdown-item">
                                 <i class="material-icons-two-tone">account_circle</i>
                                 <span>Profile</span>
                             </a>
 
-                            <a href="auth-lockscreen.html" class="dropdown-item">
+                            <a hidden href="auth-lockscreen.html" class="dropdown-item">
                                 <i class="material-icons-two-tone">https</i>
                                 <span>Lock Screen</span>
                             </a>

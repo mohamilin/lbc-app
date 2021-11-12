@@ -65,8 +65,9 @@
                     </div><!--Post image--> 
 
                     <h5><b>Deskripsi Kelas</b></h5>
-                    
-                    <p>Sociable on as carriage my position weddings raillery consider. Peculiar trifling absolute and wandered vicinity property yet. The and collecting motionless difficulty son. His hearing staying ten colonel met. Sex drew six easy four dear cold deny. Moderate children at of outweigh it. Unsatiable it considered invitation he travelling insensible. Consulted admitting oh mr up as described acuteness propriety moonlight.</p>                       
+                    <p>
+                        <%= classes.description %>
+                    </p>
                 </div>
                 <!--End post single-->            
             
@@ -83,7 +84,13 @@
                     <p>Rating Kelas   : </p>
                     <p>Kategori Kelas : <%= classes.topicId.title %> </p>
                     <center>
-                        <a href="/transaction/class/<%= classes._id %> "><button class="btn btn-main btn-theme" data-lang="en">Daftar Sekarang</button></a>
+                        <% if (!isSubscribe) { %>
+                            <a href="/transaction/class/<%= classes._id %> "><button class="btn btn-main btn-theme" data-lang="en">Daftar Sekarang</button></a>
+                        <% } else if(isSubscribe.status === 'Pending') {%>
+                            <a href="/transaction/class/<%= classes._id %> "><button class="btn btn-main btn-theme" data-lang="en">Bayar Sekarang</button></a>
+                        <% } else { %>
+                            <a href="/kelas_saya "><button class="btn btn-main btn-theme" data-lang="en">Kelas Saya</button></a>
+                        <% } %> 
                     </center>
                 </div> <!--End widget-->                
                 

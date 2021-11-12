@@ -1,68 +1,70 @@
-<nav class="topbar ">
-    <div class="container">
-        <div class="navbar-wrapper">
-            <ul class="pc-navbar">
-                <li class="pc-item pc-hasmenu">
-                    <a href="#!" class="pc-link"><span class="pc-micon"><i class="material-icons-two-tone">home</i></span><span class="pc-mtext">Dashboard</span></a>
-                </li>
-                <li class="pc-item pc-hasmenu">
-                    <a href="#!" class="pc-link"><span class="pc-micon"><i class="material-icons-two-tone">layers</i></span><span class="pc-mtext">Master Data</span><span class="pc-arrow"><i data-feather="chevron-right"></i></span></a>
-                    <ul class="pc-submenu">
-                        <li class="pc-item pc-hasmenu">
-                            <a href="/page/mentor" class="pc-link">Mentor<span class="pc-arrow"></span></a>
-                        </li>
-                        <li class="pc-item pc-hasmenu">
-                            <a href="#!" class="pc-link">Siswa<span class="pc-arrow"><i data-feather="chevron-right"></i></span></a>
-                            <ul class="pc-submenu">
-                                <li class="pc-item"><a class="pc-link" href="ac_alert.html">Sweet alert</a></li>
-                                <li class="pc-item"><a class="pc-link" href="ac-datepicker-componant.html">Datepicker</a></li>
-                                <li class="pc-item"><a class="pc-link" href="ac_lightbox.html">Lightbox</a></li>
-                            </ul>
-                        </li>
-                        <li class="pc-item pc-hasmenu">
-                            <a href="#!" class="pc-link">Level<span class="pc-arrow"><i data-feather="chevron-right"></i></span></a>
-                            <ul class="pc-submenu">
-                                <li class="pc-item"><a class="pc-link" href="icon-feather.html">Feather</a></li>
-                                <li class="pc-item"><a class="pc-link" href="icon-fontawsome.html">Font Awesome 5</a></li>
-                            </ul>
-                        </li>
-                        <li class="pc-item pc-hasmenu">
-                            <a href="#!" class="pc-link">Kategori<span class="pc-arrow"><i data-feather="chevron-right"></i></span></a>
-                            <ul class="pc-submenu">
-                                <li class="pc-item pc-hasmenu">
-                                    <a href="#!" class="pc-link">Forms Elements<span class="pc-arrow"><i data-feather="chevron-right"></i></span></a>
-                                    <ul class="pc-submenu">
-                                        <li class="pc-item"><a class="pc-link" href="form_elements.html">Form Basic</a></li>
-                                        <li class="pc-item"><a class="pc-link" href="form2_basic.html">Form Options</a></li>
-                                    </ul>
-                                </li>
-                                <li class="pc-item pc-hasmenu">
-                                    <a href="#!" class="pc-link">sasa<span class="pc-arrow"><i data-feather="chevron-right"></i></span></a>
-                                    <ul class="pc-submenu">
-                                        <li class="pc-item"><a class="pc-link" href="form2_datepicker.html">Datepicker</a></li>
-                                        <li class="pc-item"><a class="pc-link" href="form2_daterangepicker.html">Date Range Picker</a></li>
-                                        <li class="pc-item"><a class="pc-link" href="form2_timepicker.html">Timepicker</a></li>
-                                        <li class="pc-item"><a class="pc-link" href="form2_multipleselectsplitter.html">Multiple Select Splitter</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-                <li class="pc-item pc-hasmenu">
-                    <a href="#!" class="pc-link"><span class="pc-micon"><i class="material-icons-two-tone">collections_bookmark</i></span><span class="pc-mtext">Materi</span><span class="pc-arrow"><i
-                                data-feather="chevron-right"></i></span></a>
-                    <ul class="pc-submenu">
-                        <li class="pc-item">
-                            <a href="landing.html" class="pc-link dropdown-toggle" target="_blank">Chapters</a>
-                        </li>
-                        <li class="pc-item pc-hasmenu">
-                            <a href="#!" class="pc-link">Artikel<span class="pc-arrow"></span></a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="pc-item"><a href="https://learningbycode.xyz" target="_blank" class="pc-link"><span class="pc-micon"><i class="material-icons-two-tone">storefront</i></span><span class="pc-mtext">Homepage</span></a></li>
-            </ul>
+<% if (role == 'admin') { %>
+    <nav class="topbar ">
+        <div class="container">
+            <div class="navbar-wrapper">
+                <ul class="pc-navbar">
+                    <li class="pc-item pc-hasmenu">
+                        <a href="#!" class="pc-link"><span class="pc-micon"><i class="material-icons-two-tone">home</i></span><span class="pc-mtext">Dashboard</span></a>
+                    </li>
+                    <li class="pc-item pc-hasmenu">
+                        <a href="#!" class="pc-link"><span class="pc-micon"><i class="material-icons-two-tone">layers</i></span><span class="pc-mtext">Master Data</span><span class="pc-arrow"><i data-feather="chevron-right"></i></span></a>
+                        <ul class="pc-submenu">
+                            <li class="pc-item pc-hasmenu">
+                                <a href="/page/mentor" class="pc-link">Mentor<span class="pc-arrow"></span></a>
+                            </li>
+                            <li class="pc-item pc-hasmenu">
+                                <a href="#!" class="pc-link">Siswa<span class="pc-arrow"><i data-feather="chevron-right"></i></span></a>
+                                <ul class="pc-submenu">
+                                    <li class="pc-item"><a class="pc-link" href="ac_alert.html">Sweet alert</a></li>
+                                    <li class="pc-item"><a class="pc-link" href="ac-datepicker-componant.html">Datepicker</a></li>
+                                    <li class="pc-item"><a class="pc-link" href="ac_lightbox.html">Lightbox</a></li>
+                                </ul>
+                            </li>
+                            <li class="pc-item pc-hasmenu">
+                                <a href="#!" class="pc-link">Level<span class="pc-arrow"><i data-feather="chevron-right"></i></span></a>
+                                <ul class="pc-submenu">
+                                    <li class="pc-item"><a class="pc-link" href="icon-feather.html">Feather</a></li>
+                                    <li class="pc-item"><a class="pc-link" href="icon-fontawsome.html">Font Awesome 5</a></li>
+                                </ul>
+                            </li>
+                            <li class="pc-item pc-hasmenu">
+                                <a href="#!" class="pc-link">Kategori<span class="pc-arrow"><i data-feather="chevron-right"></i></span></a>
+                                <ul class="pc-submenu">
+                                    <li class="pc-item pc-hasmenu">
+                                        <a href="#!" class="pc-link">Forms Elements<span class="pc-arrow"><i data-feather="chevron-right"></i></span></a>
+                                        <ul class="pc-submenu">
+                                            <li class="pc-item"><a class="pc-link" href="form_elements.html">Form Basic</a></li>
+                                            <li class="pc-item"><a class="pc-link" href="form2_basic.html">Form Options</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="pc-item pc-hasmenu">
+                                        <a href="#!" class="pc-link">sasa<span class="pc-arrow"><i data-feather="chevron-right"></i></span></a>
+                                        <ul class="pc-submenu">
+                                            <li class="pc-item"><a class="pc-link" href="form2_datepicker.html">Datepicker</a></li>
+                                            <li class="pc-item"><a class="pc-link" href="form2_daterangepicker.html">Date Range Picker</a></li>
+                                            <li class="pc-item"><a class="pc-link" href="form2_timepicker.html">Timepicker</a></li>
+                                            <li class="pc-item"><a class="pc-link" href="form2_multipleselectsplitter.html">Multiple Select Splitter</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="pc-item pc-hasmenu">
+                        <a href="#!" class="pc-link"><span class="pc-micon"><i class="material-icons-two-tone">collections_bookmark</i></span><span class="pc-mtext">Materi</span><span class="pc-arrow"><i
+                                    data-feather="chevron-right"></i></span></a>
+                        <ul class="pc-submenu">
+                            <li class="pc-item">
+                                <a href="landing.html" class="pc-link dropdown-toggle" target="_blank">Chapters</a>
+                            </li>
+                            <li class="pc-item pc-hasmenu">
+                                <a href="#!" class="pc-link">Artikel<span class="pc-arrow"></span></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="pc-item"><a href="https://learningbycode.xyz" target="_blank" class="pc-link"><span class="pc-micon"><i class="material-icons-two-tone">storefront</i></span><span class="pc-mtext">Homepage</span></a></li>
+                </ul>
+            </div>
         </div>
-    </div>
-</nav>
+    </nav>
+<% } %>
