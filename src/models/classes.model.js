@@ -29,6 +29,12 @@ const classSchema = mongoose.Schema({
     type: ObjectId,
     ref: 'Topic',
   },
+  chapterId: [
+    {
+      type: ObjectId,
+      ref: 'Chapter',
+    },
+  ],
 });
 
 const Classes = mongoose.model('Classes', classSchema);
