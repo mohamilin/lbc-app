@@ -12,7 +12,10 @@ const viewClass = async () => {
 };
 
 const viewClassById = async (id) => {
-  const classes = await Classes.findOne({ _id: id }).populate({ path: 'topicId', select: 'title' });
+  const classes = await Classes.findOne({ _id: id })
+    .populate({ path: 'topicId', select: 'title' })
+    .populate({ path: 'chapterId', select: '_id title', populate: { path: 'lessonId', select: '_id title description' } });
+
   return classes;
 };
 
