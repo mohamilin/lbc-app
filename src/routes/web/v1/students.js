@@ -1,9 +1,13 @@
 const { Router } = require('express');
-const { viewClass, viewDetailClass } = require('../../../controllers/web/students');
+const { viewClassStudent, viewDetailClassStudent } = require('../../../controllers/web/students');
+const auth = require('../../../helpers/auth');
+const isSuccess = require('../../../helpers/transaction');
 
 const router = Router();
 
-router.get('/kelas_saya', viewClass);
-router.get('/detail_kelas/1', viewDetailClass);
+router.use(auth);
+
+router.get('/kelas_saya', viewClassStudent);
+router.get('/detail_kelas/:id', viewDetailClassStudent);
 
 module.exports = router;

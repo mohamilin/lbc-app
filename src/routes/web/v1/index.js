@@ -6,6 +6,8 @@ const studenRoute = require('./students');
 const topicRoute = require('./topics');
 const classRoute = require('./classes');
 const transactionRoute = require('./transactions');
+const chapterRoute = require('./chapters');
+const lessonRoute = require('./lessons');
 
 const router = express.Router();
 
@@ -37,6 +39,14 @@ const defaultRoutes = [
   {
     path: '/transaction',
     route: transactionRoute,
+  },
+  {
+    path: '/chapter',
+    route: chapterRoute,
+  },
+  {
+    path: '/lesson',
+    route: lessonRoute,
   },
 ];
 
