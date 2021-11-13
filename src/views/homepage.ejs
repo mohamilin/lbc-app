@@ -1,518 +1,901 @@
-<%- include('./partials/frontend/header.ejs') %> 
-  <body class="homepage_slider" data-spy="scroll" data-target=".navbar-fixed-top" data-offset="100">
-    
-    
-    <!-- Preloader -->
-    <div id="preloader">
-        <div id="spinner"></div>
-    </div>
-    <!-- End Preloader-->
+<!DOCTYPE html>
+<html lang="en">
 
-    
-    <!-- Start Navigation -->
-    <%- include('./partials/frontend/navbar.ejs') %> 
-    <!-- End Navigation -->
+<head>
+    <title>DashboardKit Bootstrap 5 Admin Template</title>
+    <!-- HTML5 Shim and Respond.js IE11 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 11]>
+    	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    	<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    	<![endif]-->
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="DashboardKit is modern yet powerful Bootstrap 5 Admin Template comes with thousands of UI components & 180+ pages."/>
+    <meta name="keywords" content="DashboardKit, Dashboard Kit, Dashboard UI Kit, Bootstrap 5, Admin Template, Admin Dashboard, CRM, CMS, Free Bootstrap Admin Template"/>
+    <meta name="author" content="DashboardKit" />
 
-    
-    <!-- Start Intro -->
-    <section id="slider">
-        <div class="rev_slider_wrapper fullscreen-container" data-alias="agency-website" id="rev_slider_280_1_wrapper" style="background-color:#fff;padding:0px;height:1080px;">
-          <!-- START REVOLUTION SLIDER 5.1.4 fullscreen mode -->
-          <div class="rev_slider fullscreenbanner" id="rev_slider_nagency" style="display:none;">
-              <ul style="display:none;">
+    <!-- Favicon icon -->
+    <link rel="icon" href="assets/images/favicon.svg" type="image/x-icon">
 
-                <!-- slider Item 1 -->
-                <li data-index="rs-1" data-transition="fadetotopfadefrombottom" data-slotamount="default" data-easein="Power3.easeInOut" data-easeout="Power3.easeInOut" data-masterspeed="1500" data-rotate="0"  data-saveperformance="off"  data-title="N.Agency" data-description="">
-                  <img src="/frontend/img/syariah.png" alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina>
+    <link rel="stylesheet" href="assets/css/plugins/animate.min.css">
+    <!-- font css -->
+    <link rel="stylesheet" href="assets/fonts/tabler-icons.min.css">
+    <link rel="stylesheet" href="assets/fonts/feather.css">
+    <link rel="stylesheet" href="assets/fonts/fontawesome.css">
+    <link rel="stylesheet" href="assets/fonts/material.css">
 
-                  <!-- LAYER NR. 1 -->
-                  <div class="tp-caption NotGeneric-Title tp-resizeme white-color rs-parallaxlevel-3" 
-                    id="slide-1-layer-1" 
-                    data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
-                    data-y="['middle','middle','middle','middle']" data-voffset="['-160','-170','-170','-120']" 
-                    data-fontsize="['70','60','60','36']"
-                    data-lineheight="['70','60','60','50']"
-                    data-width="none"
-                    data-height="none"
-                    data-whitespace="nowrap"
-                    data-transform_idle="o:1;"              
-                    data-transform_in="y:[100%];z:0;rZ:-35deg;sX:1;sY:1;skX:0;skY:0;s:2000;e:Power4.easeInOut;" 
-                    data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" 
-                    data-mask_in="x:0px;y:0px;s:inherit;e:inherit;" 
-                    data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" 
-                    data-start="1000" 
-                    data-splitin="chars" 
-                    data-splitout="none" 
-                    data-responsive_offset="on" 
-                    data-elementdelay="0.05"                    
-                    style="z-index: 5; white-space: nowrap;">Welcome to EduApp
-                  </div>
+    <!-- vendor css -->
+    <link rel="stylesheet" href="assets/css/style.css" id="main-style-link">
+    <link rel="stylesheet" href="assets/css/customizer.css">
+    <link rel="stylesheet" href="assets/css/layout-horizontal.css">
 
-                  <!-- LAYER NR. 2 -->
-                  <div class="tp-caption NotGeneric-SubTitle tp-resizeme white-color rs-parallaxlevel-4" 
-                    id="slide-1-layer-2" 
-                    data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
-                    data-y="['middle','middle','middle','middle']" data-voffset="['-80','-90','-90','-60']"
-                    data-fontsize="['28','24','24','20']"
-                    data-lineheight="['28','24','36','30']"
-                    data-width="none"
-                    data-height="none"
-                    data-whitespace="nowrap"
-                    data-transform_idle="o:1;"               
-                    data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;" 
-                    data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" 
-                    data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;" 
-                    data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" 
-                    data-start="1500" 
-                    data-splitin="none" 
-                    data-splitout="none" 
-                    data-responsive_offset="on"                     
-                    style="z-index: 6; white-space: nowrap;">#1 digital solution in the city
-                  </div>
+    <link rel="stylesheet" href="assets/css/landing.css">
+</head>
 
-                  <!-- LAYER NR. 3 -->
-                  <div class="tp-caption rs-parallaxlevel-5" 
-                    id="slide-1-layer-3" 
-                    data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
-                    data-y="['middle','middle','middle','middle']" data-voffset="['15','5','5','10']" 
-                    data-width="none"
-                    data-height="none"
-                    data-whitespace="nowrap"
-                    data-transform_idle="o:1;"
-                    data-transform_hover="o:1;rX:0;rY:0;rZ:0;z:0;s:300;e:Power1.easeInOut;"
-                    data-style_hover="c:rgba(255, 255, 255, 1.00);bc:rgba(255, 255, 255, 1.00);cursor:pointer;"
-                    data-transform_in="y:50px;opacity:0;s:1500;e:Power4.easeInOut;" 
-                    data-transform_out="y:[175%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" 
-                    data-mask_out="x:inherit;y:inherit;" 
-                    data-start="2000" 
-                    data-splitin="none" 
-                    data-splitout="none" 
-                    data-actions='[{"event":"click","action":"jumptoslide","slide":"next","delay":""}]'
-                    data-responsive_offset="on" 
-                    data-responsive="off"                   
-                    style=""><a data-scroll href='#' class='btn btn-main btn-white'>More Detail</a>
-                  </div>           
-                
-                </li>
-
-                <!-- slider Item 2 -->
-                <li data-index="rs-3" data-transition="slideremoveright" data-slotamount="default" data-easein="Power3.easeInOut" data-easeout="Power3.easeInOut" data-masterspeed="1500" data-rotate="0"  data-saveperformance="off">
-                  <img src="/frontend/img/syariah.jpg"  alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina>
-
-                  <!-- LAYER NR. 1 -->
-                  <div class="tp-caption NotGeneric-Title tp-resizeme black-color rs-parallaxlevel-3" 
-                    id="slide-2-layer-1" 
-                    data-x="['left','left','left','left']" data-hoffset="['0','50','0','0']" 
-                    data-y="['middle','middle','middle','middle']" data-voffset="['-100','-100','-100','-85']" 
-                    data-fontsize="['70','60','60','36']"
-                    data-lineheight="['70','60','60','50']"
-                    data-width="none"
-                    data-height="none"
-                    data-whitespace="nowrap"
-                    data-transform_idle="o:1;"              
-                    data-transform_in="y:[100%];z:0;rx:0deg;sX:1;sY:1;skX:0;skY:0;s:2000;e:Power4.easeInOut;" 
-                    data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" 
-                    data-mask_in="x:0px;y:0px;s:inherit;e:inherit;" 
-                    data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" 
-                    data-start="1000" 
-                    data-splitin="chars" 
-                    data-splitout="none" 
-                    data-responsive_offset="on" 
-                    data-elementdelay="0.05"                    
-                    style="z-index: 5; white-space: nowrap;">Creative & Digital
-                  </div>
-
-                  <!-- LAYER NR. 2 -->
-                  <div class="tp-caption tp-resizeme NotGeneric-Text black-color rs-parallaxlevel-4" 
-                    id="slide-2-layer-2" 
-                    data-x="['left','left','left','left']" data-hoffset="['0','50','0','0']" 
-                    data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','-10']"
-                    data-fontsize="['18','18','20','14']"
-                    data-lineheight="['28','28','32','24']"
-                    data-width="none"
-                    data-height="none"
-                    data-whitespace="nowrap"
-                    data-transform_idle="o:1;"               
-                    data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;" 
-                    data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" 
-                    data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;" 
-                    data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" 
-                    data-start="1500" 
-                    data-splitin="none" 
-                    data-splitout="none" 
-                    data-responsive_offset="on"                   
-                    style="z-index: 6;">Particular unaffected projection sentiments no my. Music marry as at cause<br> party worth weeks. Saw how marianne graceful dissuade new outlived.<br> Uneasy no settle whence nature narrow.
-                  </div>
-
-                  <!-- LAYER NR. 3 -->
-                  <div class="tp-caption rs-parallaxlevel-5" 
-                    id="slide-2-layer-3" 
-                    data-x="['left','left','left','left']" data-hoffset="['0','50','0','0']" 
-                    data-y="['middle','middle','middle','middle']" data-voffset="['105','105','115','85']" 
-                    data-width="none"
-                    data-height="none"
-                    data-whitespace="nowrap"
-                    data-transform_idle="o:1;"
-                    data-transform_hover="o:1;rX:0;rY:0;rZ:0;z:0;s:300;e:Power1.easeInOut;"
-                    data-style_hover="c:rgba(255, 255, 255, 1.00);bc:rgba(255, 255, 255, 1.00);cursor:pointer;"
-                    data-transform_in="y:50px;opacity:0;s:1500;e:Power4.easeInOut;" 
-                    data-transform_out="y:[175%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" 
-                    data-mask_out="x:inherit;y:inherit;" 
-                    data-start="2000" 
-                    data-splitin="none" 
-                    data-splitout="none" 
-                    data-actions='[{"event":"click","action":"jumptoslide","slide":"next","delay":""}]'
-                    data-responsive_offset="on" 
-                    data-responsive="off"                   
-                    style=""><a data-scroll href='#portfolio' class='btn btn-main btn-black'>More Detail</a>
-                  </div>          
-                
-                </li>
-
-                <!-- slider Item 3 -->
-                <li data-index="rs-2" data-slotamount="default" data-easein="Power3.easeInOut" data-easeout="Power3.easeInOut" data-masterspeed="1500" data-rotate="0"  data-saveperformance="off">
-                  <img alt="" class="rev-slidebg" data-bgparallax="3" data-bgposition="center center" data-duration="5000" data-ease="Linear.easeNone" data-kenburns="on" data-no-retina="" data-offsetend="0 0" data-offsetstart="0 0" data-rotateend="0" data-rotatestart="0" data-scaleend="100" data-scalestart="110" src="/frontend/img/syariah.png">
-
-                  <!-- LAYER NR. 1 -->
-                  <div class="tp-caption NotGeneric-Title tp-resizeme white-color rs-parallaxlevel-3" 
-                    id="slide-3-layer-1" 
-                    data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
-                    data-y="['middle','middle','middle','middle']" data-voffset="['-75','-70','-70','-45']" 
-                    data-fontsize="['70','60','60','36']"
-                    data-lineheight="['70','60','60','50']"
-                    data-width="none"
-                    data-height="none"
-                    data-whitespace="nowrap"
-                    data-transform_idle="o:1;"              
-                    data-transform_in="x:[105%];z:0;rX:45deg;rY:0deg;rZ:90deg;sX:1;sY:1;skX:0;skY:0;s:2000;e:Power4.easeInOut;" 
-                    data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" 
-                    data-mask_in="x:0px;y:0px;s:inherit;e:inherit;" 
-                    data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" 
-                    data-start="1000" 
-                    data-splitin="chars" 
-                    data-splitout="none" 
-                    data-responsive_offset="on" 
-                    data-elementdelay="0.05"                    
-                    style="z-index: 5; white-space: nowrap;">100% Responsive.
-                  </div>
-
-                  <!-- LAYER NR. 2 -->
-                  <div class="tp-caption NotGeneric-SubTitle white-color tp-resizeme rs-parallaxlevel-2" 
-                    id="slide-3-layer-2" 
-                    data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
-                    data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']"
-                    data-fontsize="['28','24','24','20']"
-                    data-lineheight="['28','24','36','30']"
-                    data-width="none"
-                    data-height="none"
-                    data-whitespace="nowrap"
-                    data-transform_idle="o:1;"
-                    data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;" 
-                    data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" 
-                    data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;" 
-                    data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" 
-                    data-start="1500" 
-                    data-splitin="none" 
-                    data-splitout="none" 
-                    data-responsive_offset="on"                    
-                    style="z-index: 6; white-space: nowrap;">Create Beautiful Websites
-                  </div>
-
-                  <!-- LAYER NR. 3 -->
-                  <div class="tp-caption rs-parallaxlevel-5" 
-                    id="slide-3-layer-3" 
-                    data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
-                    data-y="['middle','middle','middle','middle']" data-voffset="['90','90','100','75']" 
-                    data-width="none"
-                    data-height="none"
-                    data-whitespace="nowrap"
-                    data-transform_idle="o:1;"
-                    data-transform_hover="o:1;rX:0;rY:0;rZ:0;z:0;s:300;e:Power1.easeInOut;"
-                    data-style_hover="c:rgba(255, 255, 255, 1.00);bc:rgba(255, 255, 255, 1.00);cursor:pointer;"
-                    data-transform_in="y:50px;opacity:0;s:1500;e:Power4.easeInOut;" 
-                    data-transform_out="y:[175%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" 
-                    data-mask_out="x:inherit;y:inherit;" 
-                    data-start="2000" 
-                    data-splitin="none" 
-                    data-splitout="none" 
-                    data-actions='[{"event":"click","action":"jumptoslide","slide":"next","delay":""}]'
-                    data-responsive_offset="on" 
-                    data-responsive="off"                   
-                    style=""><a href='#' class='btn btn-main btn-transparent-light'>Purchase Now</a>
-                  </div>
-
-                </li>
-
-              </ul>
-              <div class="tp-bannertimer tp-bottom" style="visibility: hidden !important;"></div>
-          </div>
-      </div>
-    </section>
-    <!-- End Intro -->
-
-    <!-- Start Regular Section -->
-    <section class="p-top-80 p-bottom-80">
+<body>
+    <!-- [ Nav ] start -->
+    <nav class="navbar navbar-expand-md navbar-dark default">
         <div class="container">
-            <div class="row">
-
-                <div class="col-md-6">
-                    <!-- Section Title -->
-                    <div class="m-bottom-30">
-                        <h2 class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.6s">Tentang Kami</h2>
-                        <div class="divider-small wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.7s"></div>
-                    </div>
-
-                    <div class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.8s">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                    </div>
-
-                    <a data-scroll href="tentang-kami.html" class="m-top-30 m-bottom-30 btn btn-main wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.8s">Lihat Selengkapnya</a>
-
-                    
-                </div> <!-- /.col -->
-
-                <div class="col-md-6">
-
-                    <div class="feature-image">
-                        <img src="/frontend/img/sample1.png" alt="Feature Image" class="img-responsive wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.6s" />
-                    </div>                  
-                    
-                </div> <!-- /.col -->
-
-            </div> <!-- /.row -->
-        </div> <!-- /.container -->
-    </section>
-    <!-- End Regular Section -->
-
-    <!-- Start Stat -->
-    <section id="stat" class="parallax-bg overlay-light p-top-80 p-bottom-40 black-color" style="background-color:whitesmoke; " data-stellar-background-ratio="0.5">
-        <div class="container">
-            <div class="row">
-                
-                <!-- === Stats Item 2 === -->
-                <div class="col-md-6 col-sm-6 p-bottom-40">
-                    <center>
-                    <div class="stat-item stat-item-type-2 wow zoomIn" data-wow-duration="1s" data-wow-delay="0.4s">
-                        <div class="stat-item-icon black-color" style="border-color: black">
-                            <i class="fa fa-users"></i>
-                        </div>
-                        <div class="stat-item-number">
-                            <%= totalStudent %> 
-                        </div>
-                        <div class="stat-item-text">
-                            Siswa
-                        </div>
-                    </div>
-                    </center>
-                </div> <!-- /.col -->
-                
-                <!-- === Stats Item 3 === -->
-                <div class="col-md-6 col-sm-6 p-bottom-40">
-                    <center>
-                    <div class="stat-item stat-item-type-2 wow zoomIn" data-wow-duration="1s" data-wow-delay="0.5s">
-                        <div class="stat-item-icon black-color" style="border-color: black">
-                            <i class="fa fa-book"></i>
-                        </div>
-                        <div class="stat-item-number">
-                            <%= classes.length %> 
-                        </div>
-                        <div class="stat-item-text">
-                            Kelas
-                        </div>
-                    </div>
-                    </center>
-                </div> <!-- /.col -->
-                
-            </div> <!-- /.row -->
-        </div> <!-- /.container -->
-    </section>
-    <!-- End Stat -->
-
-    <!-- Start blog -->
-    <section id="blog" class="p-top-80 p-bottom-80">
-
-        <div class="container ">
-
-            <div class="row">
-                <div class="col-md-8 col-md-offset-2">
-                    <!-- Section Title -->
-                    <div class="section-title text-center m-bottom-40">
-                        <h2 class="wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.6s">Daftar Kelas</h2>
-                        <div class="divider-center-small wow zoomIn" data-wow-duration="1s" data-wow-delay="0.6s"></div>
-                        <p class="section-subtitle wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s"><em>Bed sincerity yet therefore forfeited his certainty neglected questions. Pursuit chamber as elderly amongst on. Distant however warrant farther to of.</em></p>
-                    </div>
-                </div> <!-- /.col -->
-            </div>  <!-- /.row -->
-
-            <div class="row">
-                <!-- === blog === -->
-                <div id="owl-blog" class="owl-carousel owl-theme">
-
-                    <!-- === Blog item 1 === -->
-                    <% for(let i = 0; i < classes.length; i++){ %>
-                    <div class="blog wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.7s">
-                        <!-- === Price Item 1 === --> 
-                    <div class="col-md-12 col-sm-12 p-bottom-30">
-                        <div class="price-item text-center wow flipInX" data-wow-delay="0.6s">
-                            <div class="price-item-header">
-                                <h4><%= classes[i].name %> </h4>
-                            </div>
-                            <div>
-                                <img src="/frontend/img/ekonomi-syariah.jpg">
-                            </div>
-                            <ul class="price-item-features list-unstyled">
-                                <li><p class="small"><%= classes[i].shortDesc %></p></li>                      
-                            </ul>
-                            <div class="price-item-price">
-                                <p class="big">Rp <%= classes[i].price %><span class="currency"></span></p>
-                                <p class="small"></p>
-                            </div>
-                            <a href="/classes/<%= classes[i]._id %> " class="btn btn-main btn-transparent">Lihat Detail</a>
-                        </div>
-                    </div> <!-- /.col -->                 
-                    </div> <!-- /.blog -->
-                    <% } %> 
-                    <!-- === Blog item 2 === -->
-                    <div class="blog wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.7s" hidden>
-                        <!-- === Price Item 2 === --> 
-                        <div class="col-md-12 col-sm-12 p-bottom-30">
-                            <div class="price-item text-center wow flipInX" data-wow-delay="0.7s">
-                                <div class="price-item-header">
-                                    <h4>Syariat Islam</h4>
-                                </div>
-                                <div>
-                                    <img src="/frontend/img/sample1.png">
-                                </div>
-                                <ul class="price-item-features list-unstyled">
-                                    <li><p class="small">Deskripsi singkat kelas</p></li>                     
-                                </ul>
-                                <div class="price-item-price">
-                                    <p class="big">49<span class="currency">K</span></p>
-                                    <p class="small"></p>
-                                </div>
-                                <a href="detail-kelas.html" class="btn btn-main btn-transparent">Lihat Detail</a>
-                            </div>
-                        </div> <!-- /.col -->              
-                    </div> <!-- /.blog -->
-
-                    <!-- === Blog item 3 === -->
-                    <div class="blog wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.7s" hidden>
-                        <!-- === Price Item 3 === --> 
-                        <div class="col-md-12 col-sm-12 p-bottom-30">
-                            <div class="price-item text-center wow flipInX" data-wow-delay="0.8s">
-                                <div class="price-item-header price-item-header-alt">
-                                    <h4>Ekonomi Syariah</h4>
-                                </div>
-                                <div>
-                                    <img src="/frontend/img/sample1.png">
-                                </div>
-                                <ul class="price-item-features list-unstyled">
-                                    <li><p class="small">Deskripsi singkat kelas</p></li>                     
-                                </ul>
-                                <div class="price-item-price">
-                                    <p class="big">79<span class="currency">K</span></p>
-                                    <p class="small"></p>
-                                </div>
-                                <a href="detail-kelas.html" class="btn btn-main btn-theme">Lihat Detail</a>
-                            </div>
-                        </div> <!-- /.col -->                  
-                    </div> <!-- /.blog -->
-
-                    <!-- === Blog item 4 === -->
-                    <div class="blog wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.7s" hidden>
-                        <!-- === Price Item 4 === --> 
-                        <div class="col-md-12 col-sm-12 p-bottom-30">
-                            <div class="price-item text-center wow flipInX" data-wow-delay="0.9s">
-                                <div class="price-item-header">
-                                    <h4>Syariah</h4>
-                                </div>
-                                <div>
-                                    <img src="/frontend/img/sample1.png">
-                                </div>
-                                <ul class="price-item-features list-unstyled">
-                                    <li><p class="small">Deskripsi singkat kelas</p></li>                      
-                                </ul>
-                                <div class="price-item-price">
-                                    <p class="big">99<span class="currency">K</span></p>
-                                    
-                                </div>
-                                <a href="detail-kelas.html" class="btn btn-main btn-transparent">Lihat Detail</a>
-                            </div>
-                        </div> <!-- /.col -->       
-                    </div> <!-- /.blog -->
-
-                </div><!-- /#owl-testimonials -->
-
-            </div> <!-- /.row -->
-
-        </div> <!-- /.container -->
-
-    </section>
-
-    <!-- Start Testimonial -->
-    <section id="testimonials" class="parallax-bg overlay-dark p-top-80 p-bottom-80" style="background-image:url(/frontend/img/testimonial-bg.jpg)" data-stellar-background-ratio="0.5">
-
-        <!-- Section Title -->
-        <div class="section-title text-center white-color m-bottom-40">
-            <h2 class="wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.6s">Testimonials</h2>
-            <div class="divider-center-small divider-white wow zoomIn" data-wow-duration="1s" data-wow-delay="0.6s"></div>
+            <a class="navbar-brand" href="#">
+                <img src="assets/images/logo.svg" alt="logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01"
+                aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#features">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#layouts">Layouts</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#testimonial">Testimonial</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#pricing">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#faq">Faq</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact Us</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="btn btn-primary my-1 me-2" href="#">Buy now</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-secondary my-1" href="#">Demo</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-
-        <!-- === Testimonials === -->
-        <div id="owl-testimonials" class="owl-carousel owl-theme testimonial text-center white-color">
-
-            <!-- === Testimonial item 1 === -->
-            <div class="testimonial-item text-center">
-                <p class="testimonial-desc">Residence you satisfied and rapturous certainty two. Procured outweigh as outlived so so. On in bringing graceful proposal blessing of marriage outlived. Son rent face our loud near.</p>
-                <div class="testimonial-thumb">
-                    <img class="img-responsive" src="/frontend/img/testimonial/1.jpg" alt="">
-                </div>
-                <h5 class="testimonial-author">Jenny Doe - Star Inc</h5>
-            </div>
-
-            <!-- === Testimonial item 2 === -->
-            <div class="testimonial-item text-center">
-                <p class="testimonial-desc">Excellent so to no sincerity smallness. Removal request delight if on he we. Unaffected in we by apartments astonished to decisively themselves. Offended ten old consider speaking.</p>
-                <div class="testimonial-thumb">
-                    <img class="img-responsive" src="/frontend/img/testimonial/2.jpg" alt="">
-                </div>
-                <h5 class="testimonial-author">Kathy Doe - Service Corp</h5>
-            </div>
-
-            <!-- === Testimonial item 3 === -->
-            <div class="testimonial-item text-center">
-                <p class="testimonial-desc">Advanced and procured civility not absolute put continue. Overcame breeding or my concerns removing desirous so absolute. My melancholy unpleasing imprudence considered in advantages.</p>
-                <div class="testimonial-thumb">
-                    <img class="img-responsive" src="/frontend/img/testimonial/3.jpg" alt="">
-                </div>
-                <h5 class="testimonial-author">Jack Doe - Inka Design</h5>
-            </div>
-
-        </div> <!-- /#owl-testimonials -->
-
-    </section>
-    <!-- End Testimonial -->
-
-
-    <!-- Start Footer -->
-    <footer class="site-footer">
+    </nav>
+    <!-- [ Nav ] start -->
+    <!-- [ Header ] start -->
+    <header id="home">
         <div class="container">
-            <small class="copyright pull-left">Copyrights © 2019 All Rights Reserved By <a href="#">Halaka</a>.</small>
-            <div class="social-icon pull-right">
-                <a href="#"><i class="fa fa-facebook"></i></a>
-                <a href="#"><i class="fa fa-twitter"></i></a>
-                <a href="#"><i class="fa fa-instagram"></i></a>
-                <a href="#"><i class="fa fa-youtube"></i></a>
+            <div class="row align-items-center">
+                <div class="col-sm-5">
+                    <h5 class="mt-3 text-white-50 wow fadeInLeft" data-wow-delay="0.2s">Bootstrap 5 Admin Template</h5>
+                    <h2 class="mt-sm-3 mb-sm-4 text-white wow fadeInLeft" data-wow-delay="0.4s">A Premium Dashboard + UI
+                        KIT</h2>
+                    <p class="mb-sm-4 wow fadeInLeft" data-wow-delay="0.6s">Dashboard-kit builds in a way to save your
+                        time while<br> designing your backend project.</p>
+                    <div class="my-4 wow fadeInLeft" data-wow-delay="0.8s">
+                        <a href="#layouts" class="btn btn-primary me-2"><i class="far fa-eye me-2"></i>Demos</a>
+                        <a href="https://1.envato.market/DM91j" class="btn btn-success" target="_blank"><i
+                                class="fas fa-shopping-cart me-2"></i>Buy now</a>
+                    </div>
+                </div>
+                <div class="col-sm-7">
+                    <img src="assets/front/header-mokeup.jpg" alt="Dashboard-kit Admin Template"
+                        class="img-fluid header-img wow fadeInRight" data-wow-delay="0.2s">
+                </div>
             </div>
-            <!-- /social-icon -->
         </div>
-        <!-- /container -->
+    </header>
+    <!-- [ Header ] End -->
+    <!-- [ feature ] Start -->
+    <section id="features">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-6 col-md-9 title">
+                    <i class="material-icons-two-tone">card_giftcard</i>
+                    <h2>Our Admin's <span>Awasome Features</span></h2>
+                    <p class="m-0">Quickly create your stunning backend project with Dashboard-kit, it is made for
+                        everyone, no matter you are a novice developer, designer, project manager/owner.</p>
+                </div>
+            </div>
+            <div class="row g-0 feature-row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-block wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="feature-icon"><i class="material-icons-two-tone">chrome_reader_mode</i></div>
+                        <h4>200+ Pages</h4>
+                        <p>Cover almost all possible page which required for any backend application.<br /></p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-block wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="feature-icon"><i class="material-icons-two-tone">palette</i></div>
+                        <h4>Professional Design</h4>
+                        <p>Dashboard-kit design gives your user better UI experience throught out the project.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-block wow fadeInUp" data-wow-delay="0.6s">
+                        <div class="feature-icon"><i class="material-icons-two-tone">shutter_speed</i></div>
+                        <h4>High Performance</h4>
+                        <p>High optimized tested code which gives faster loading experience.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-block wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="feature-icon"><i class="material-icons-two-tone">memory</i></div>
+                        <h4>Regular Updates</h4>
+                        <p>Promise to always updated with latest tech. Check out future roadmap.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-block wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="feature-icon"><i class="material-icons-two-tone">support</i></div>
+                        <h4>Support</h4>
+                        <p>Support first. Low turn around time to get resolve your techincal query.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-block wow fadeInUp" data-wow-delay="0.6s">
+                        <div class="feature-icon"><i class="material-icons-two-tone">ondemand_video</i></div>
+                        <h4>Video Tutorials</h4>
+                        <p>Installation, Configuration settings, How-to video tutorial series.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- [ feature ] End -->
+    <!-- [ layouts ] Start -->
+    <section id="layouts" class="theme-alt-bg">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-6 col-md-9 title">
+                    <i class="material-icons-two-tone">devices_other</i>
+                    <h2>Our Best <span>Layouts</span> now in easy & Simple way</h2>
+                    <p class="m-0">Each Layout is identical to its way. We have a plan to release more layouts in future
+                        updates Quickly create your stunning backend project with Dashboard-kit</p>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-4 col-md-6">
+                    <div class="layout-block wow fadeInUp" data-wow-delay="0.2s">
+                        <a href="#!" class="layout-img">
+                            <img src="assets/front/Layout-1.png" alt="" class="img-fluid">
+                            <span class="overlay-action">
+                                <i class="material-icons-two-tone">remove_red_eye</i>
+                            </span>
+                        </a>
+                        <h4 class="m-0">Master Layout</h4>
+                        <p class="text-muted">Default Layout</p>
+                        <p>Cover almost all possible page which required for any backend application.<br /></p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="layout-block wow fadeInUp" data-wow-delay="0.4s">
+                        <a href="#!" class="layout-img">
+                            <img src="assets/front/Layout-2.png" alt="" class="img-fluid">
+                            <span class="overlay-action">
+                                <i class="material-icons-two-tone">remove_red_eye</i>
+                            </span>
+                        </a>
+                        <h4 class="m-0">Collapse</h4>
+                        <p class="text-muted">Collapse sidebar</p>
+                        <p>Cover almost all possible page which required for any backend application.<br /></p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="layout-block wow fadeInUp" data-wow-delay="0.6s">
+                        <a href="#!" class="layout-img">
+                            <img src="assets/front/Layout-3.png" alt="" class="img-fluid">
+                            <span class="overlay-action">
+                                <i class="material-icons-two-tone">remove_red_eye</i>
+                            </span>
+                        </a>
+                        <h4 class="m-0">Horizontal</h4>
+                        <p class="text-muted">Advance Horizontal Menu</p>
+                        <p>Cover almost all possible page which required for any backend application.<br /></p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="layout-block wow fadeInUp" data-wow-delay="0.2s">
+                        <a href="#!" class="layout-img">
+                            <img src="assets/front/Layout-4.png" alt="" class="img-fluid">
+                            <span class="overlay-action">
+                                <i class="material-icons-two-tone">remove_red_eye</i>
+                            </span>
+                        </a>
+                        <h4 class="m-0">Modern</h4>
+                        <p class="text-muted">Modern Look</p>
+                        <p>Cover almost all possible page which required for any backend application.<br /></p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="layout-block wow fadeInUp" data-wow-delay="0.4s">
+                        <a href="#!" class="layout-img">
+                            <img src="assets/front/Layout-5.png" alt="" class="img-fluid">
+                            <span class="overlay-action">
+                                <i class="material-icons-two-tone">remove_red_eye</i>
+                            </span>
+                        </a>
+                        <h4 class="m-0">Tab</h4>
+                        <p class="text-muted">Tab style Sidebar</p>
+                        <p>Cover almost all possible page which required for any backend application.<br /></p>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center pt-sm-4">
+                <button class="btn px-sm-5 btn-primary">Show All</button>
+            </div>
+        </div>
+    </section>
+    <!-- [ layouts ] End -->
+    <!-- [ call-to-action ] Start -->
+    <section class="call-to-action">
+        <div class="container">
+            <div class="cta-block text-center text-md-start">
+                <div class="row justify-content-center">
+                    <div class="col-md-auto">
+                        <i class="material-icons-two-tone">card_giftcard</i>
+                    </div>
+                    <div class="col-md-7 text-center text-md-start">
+                        <div class="st_cta_content st_cta_content_v2 st-text-md-center m-md-b-50">
+                            <h2 class="">Want trial version of <strong>Dashboard-kit</strong>?</h2>
+                            <p class=" mb-3 mb-sm-0">Download free version of Dashboard-kit before make your purchase
+                                decision.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 d-flex justify-content-center justify-content-md-end align-items-center">
+                        <a class="btn btn-primary px-sm-5" href="#">Download Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- [ call-to-action ] End -->
+    <!-- [ testimonial ] Start -->
+    <section id="testimonial" class="theme-alt-bg">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-6 col-md-9 title">
+                    <i class="material-icons-two-tone">mark_chat_unread</i>
+                    <h2>what our <span>client says</span>! </h2>
+                    <p class="m-0">Each Layout is identical to its way. We have a plan to release more layouts in future
+                        updates Quickly create your stunning backend project with Dashboard-kit</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                        <div class="row justify-content-center">
+                            <div class="col-md-11 col-xl-10 col-xxl-9">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="testimonial-block wow fadeInUp" data-wow-delay="0.2s">
+                                                    <div class="test-quote">
+                                                        <i class="fas fa-quote-left"></i>
+                                                    </div>
+                                                    <h4 class="mb-sm-3">Code organization is very powerful</h4>
+                                                    <p class="text-muted mb-sm-4">Amazing template, the view is
+                                                        wonderful the colors make a nice composition and the most
+                                                        important the code organization is very powerful and clean,
+                                                        <strong>easy to use
+                                                        </strong>every component, I
+                                                        really love it... good Job for your team...
+                                                    </p>
+                                                    <h6 class="mb-0">Mr. Joseph William</h6>
+                                                    <span class="text-muted">Sr. developer</span>
+                                                    <div class="test-img">
+                                                        <img src="assets/images/user/avatar-2.jpg" alt="user-image"
+                                                            class="user-avtar">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="testimonial-block wow fadeInUp" data-wow-delay="0.4s">
+                                                    <div class="test-quote">
+                                                        <i class="fas fa-quote-left"></i>
+                                                    </div>
+                                                    <h4 class="mb-sm-3">FAR the best I've come across</h4>
+                                                    <p class="text-muted mb-sm-4">Amazing template, the view is
+                                                        wonderful the colors make a nice composition and the most
+                                                        important the code organization is very powerful and clean,
+                                                        <strong>easy to use
+                                                        </strong>every component, I
+                                                        really love it... good Job for your team...
+                                                    </p>
+                                                    <h6 class="mb-0">Mr. Joseph William</h6>
+                                                    <span class="text-muted">Sr. developer</span>
+                                                    <div class="test-img">
+                                                        <img src="assets/images/user/avatar-1.jpg" alt="user-image"
+                                                            class="user-avtar">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="testimonial-block wow fadeInUp" data-wow-delay="0.2s">
+                                                    <div class="test-quote">
+                                                        <i class="fas fa-quote-left"></i>
+                                                    </div>
+                                                    <h4 class="mb-sm-3">No exceptions using this product</h4>
+                                                    <p class="text-muted mb-sm-4">Amazing template, the view is
+                                                        wonderful the colors make a nice composition and the most
+                                                        important the code organization is very powerful and clean,
+                                                        <strong>easy to use
+                                                        </strong>every component, I
+                                                        really love it... good Job for your team...
+                                                    </p>
+                                                    <h6 class="mb-0">Mr. Joseph William</h6>
+                                                    <span class="text-muted">Sr. developer</span>
+                                                    <div class="test-img">
+                                                        <img src="assets/images/user/avatar-3.jpg" alt="user-image"
+                                                            class="user-avtar">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="testimonial-block wow fadeInUp" data-wow-delay="0.4s">
+                                                    <div class="test-quote">
+                                                        <i class="fas fa-quote-left"></i>
+                                                    </div>
+                                                    <h4 class="mb-sm-3">Better support!</h4>
+                                                    <p class="text-muted mb-sm-4">Amazing template, the view is
+                                                        wonderful the colors make a nice composition and the most
+                                                        important the code organization is very powerful and clean,
+                                                        <strong>easy to use
+                                                        </strong>every component, I
+                                                        really love it... good Job for your team...
+                                                    </p>
+                                                    <h6 class="mb-0">Mr. Joseph William</h6>
+                                                    <span class="text-muted">Sr. developer</span>
+                                                    <div class="test-img">
+                                                        <img src="assets/images/user/avatar-4.jpg" alt="user-image"
+                                                            class="user-avtar">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="testimonial-block">
+                                                    <div class="test-quote">
+                                                        <i class="fas fa-quote-left"></i>
+                                                    </div>
+                                                    <h4 class="mb-sm-3">Code organization is very powerful</h4>
+                                                    <p class="text-muted mb-sm-4">Amazing template, the view is
+                                                        wonderful the colors make a nice composition and the most
+                                                        important the code organization is very powerful and clean,
+                                                        <strong>easy to use
+                                                        </strong>every component, I
+                                                        really love it... good Job for your team...
+                                                    </p>
+                                                    <h6 class="mb-0">Mr. Joseph William</h6>
+                                                    <span class="text-muted">Sr. developer</span>
+                                                    <div class="test-img">
+                                                        <img src="assets/images/user/avatar-2.jpg" alt="user-image"
+                                                            class="user-avtar">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="testimonial-block">
+                                                    <div class="test-quote">
+                                                        <i class="fas fa-quote-left"></i>
+                                                    </div>
+                                                    <h4 class="mb-sm-3">Code organization is very powerful</h4>
+                                                    <p class="text-muted mb-sm-4">Amazing template, the view is
+                                                        wonderful the colors make a nice composition and the most
+                                                        important the code organization is very powerful and clean,
+                                                        <strong>easy to use
+                                                        </strong>every component, I
+                                                        really love it... good Job for your team...
+                                                    </p>
+                                                    <h6 class="mb-0">Mr. Joseph William</h6>
+                                                    <span class="text-muted">Sr. developer</span>
+                                                    <div class="test-img">
+                                                        <img src="assets/images/user/avatar-5.jpg" alt="user-image"
+                                                            class="user-avtar">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <ol class="carousel-indicators test-indicators">
+                            <li data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"></li>
+                            <li data-bs-target="#carouselExampleDark" data-bs-slide-to="1"></li>
+                            <li data-bs-target="#carouselExampleDark" data-bs-slide-to="2"></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- [ testimonial ] End -->
+    <!-- [ pricing ] Start -->
+    <section id="pricing">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-6 col-md-9 title">
+                    <i class="material-icons-two-tone">monetization_on</i>
+                    <h2>our <span>Pricing Plans</span></h2>
+                    <p class="m-0">Each Layout is identical to its way. We have a plan to release more layouts in future
+                        updates Quickly create your stunning backend project with Dashboard-kit</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-lg-4">
+                    <!-- price tab 1 -->
+                    <div class="price-block wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="price-head">
+                            <i class="material-icons-two-tone price-icon text-danger">card_giftcard</i>
+                            <div class="h3">Free</div>
+                        </div>
+                        <div class="price-package">
+                            <strong>$00
+                                <span>monthly</span></strong>
+                        </div>
+                        <ul class="list-unstyled price-list">
+                            <li><i data-feather="check-circle"></i> Only 1 User uses</li>
+                            <li><i data-feather="check-circle"></i> 10 Projects for individuals</li>
+                            <li><i data-feather="check-circle"></i> 5GB of Storage + Unlimited Bandwitch</li>
+                            <li><i data-feather="check-circle"></i> Unlimited Data</li>
+                            <li><i data-feather="check-circle"></i> Fully Security Suite</li>
+                        </ul>
+                        <button class="btn btn-primary "> Order Now </button>
+                    </div>
+                    <!-- price tab 1 -->
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <!-- price tab 2 -->
+                    <div class="price-block active wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="price-badge">
+                            New
+                        </div>
+                        <div class="price-head">
+                            <i class="material-icons-two-tone price-icon text-white">account_balance</i>
+                            <div class="h3">Standard</div>
+                        </div>
+                        <div class="price-package">
+                            <strong>$100
+                                <span>monthly</span></strong>
+                        </div>
+                        <ul class="list-unstyled price-list">
+                            <li><i data-feather="check-circle"></i> Only 1 User uses</li>
+                            <li><i data-feather="check-circle"></i> 10 Projects for individuals</li>
+                            <li><i data-feather="check-circle"></i> 5GB of Storage + Unlimited Bandwitch</li>
+                            <li><i data-feather="check-circle"></i> Unlimited Data</li>
+                            <li><i data-feather="check-circle"></i> Fully Security Suite</li>
+                        </ul>
+                        <button class="btn btn-light "> Order Now </button>
+                    </div>
+                    <!-- price tab 2 -->
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <!-- price tab 3 -->
+                    <div class="price-block wow fadeInUp" data-wow-delay="0.6s">
+                        <div class="price-head">
+                            <i class="material-icons-two-tone price-icon text-success">business</i>
+                            <div class="h3">Premium</div>
+                        </div>
+                        <div class="price-package">
+                            <strong>$600
+                                <span>monthly</span></strong>
+                        </div>
+                        <ul class="list-unstyled price-list">
+                            <li><i data-feather="check-circle"></i> Only 1 User uses</li>
+                            <li><i data-feather="check-circle"></i> 10 Projects for individuals</li>
+                            <li><i data-feather="check-circle"></i> 5GB of Storage + Unlimited Bandwitch</li>
+                            <li><i data-feather="check-circle"></i> Unlimited Data</li>
+                            <li><i data-feather="check-circle"></i> Fully Security Suite</li>
+                        </ul>
+                        <button class="btn btn-primary "> Order Now </button>
+                    </div>
+                    <!-- price tab 3 -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- [ pricing ] End -->
+    <!-- [ FAQ ] Start -->
+    <section id="faq" class="FAQ theme-alt-bg">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-6 col-md-9 title">
+                    <i class="material-icons-two-tone">help</i>
+                    <h2>Frequently Asked <span>Questions</span></h2>
+                    <p class="m-0">Each Layout is identical to its way. We have a plan to release more layouts in future
+                        updates Quickly create your stunning backend project with Dashboard-kit</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <h5 class="">What is <u> Dashboard-kit</u>?</h5>
+                    <p>Dashboard-kit is premium dashboard template comes with tons of layout options, widgets, ready to
+                        use
+                        pages which completely suitable for any simple/complex project.</p>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <h5 class="">Why <u>choose</u> Dashboard-kit?</h5>
+                    <p>Dashboard-kit is made by Phoenixcoded's experience coders and designers. Well tested bug free
+                        code, easy
+                        to use flexible structure makes Dashboard-kit a really differ from other templates. We
+                        almost cover every possible plugins, components which helps you start immediately on your
+                        project.</p>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <h5 class="">What about Item <u>Support</u>?</h5>
+                    <p>6 month item support for any bugs, design issue in current version of template. We are not
+                        provide support for any custom work implementation.</p>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <h5 class="">What is Support <u>Turnaround time</u>?</h5>
+                    <p>When you comment or submit the ticket for support. Our team takes it seriously and respond it
+                        within a Half or Full day.</p>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <h5 class="">Browser <u>Support?</u></h5>
+                    <p class="mb-0">Well tested on IE=>11, Edge, Chrome, Mozilla, Safari, Opera</p>
+                </div>
+                <div class="col-12">
+                    <h3 class="">Final Words -<u>Reason to choose Dashboard-kit</u>?</h3>
+                    <p>Flexible code structure, easy helper guide (i.e. just copy/paste code with single click UI kit),
+                        vast amount of components and layouts to choose, live customizer for your easy to choose layout
+                        setting options make Dashboard-kit a
+                        really suitable for any level of developers.</p>
+                </div>
+                <div class="col-12">
+                    <div class="text-center mt-sm-5">
+                        <h5>Still have any Question?</h5>
+                        <div class="btn btn-primary"><i data-feather="mail"></i> Email us</div>
+                        <div class="btn btn-secondary"><i data-feather="message-square"></i> Visite Forum</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- [ FAQ ] end -->
+    <!-- [ contact ] Start -->
+    <section id="contact">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-6 col-md-9 title">
+                    <i class="material-icons-two-tone">map</i>
+                    <h2>Contact <span>with us</span></h2>
+                    <p class="m-0">Each Layout is identical to its way. We have a plan to release more layouts in future
+                        updates Quickly create your stunning backend project with Dashboard-kit</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="h4 mt-3 mb-4"><i class="material-icons-two-tone text-primary">message</i> Say Hello
+                    </div>
+                    <form class="">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label class="form-label">Enter Your Name</label>
+                                    <input type="text" name="first_name" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label class="form-label">Enter Your Email</label>
+                                    <input type="email" name="contact_email" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="form-group">
+                                    <label class="form-label">Emter Message</label>
+                                    <textarea name="contact_message" class="form-control" rows="5"></textarea>
+                                </div>
+                                <div class="text-end">
+                                    <button class="btn btn-primary"><i data-feather="mail"></i> Send</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-sm-3">
+                    <div class="h4 mt-3 mb-2"><i class="material-icons-two-tone text-primary">phone_iphone</i> Phone
+                    </div>
+                    <ul class="list-unstyled p-l-30">
+                        <li class="my-1">+91 0123456789</li>
+                        <li class="my-1">+91 0123456789</li>
+                    </ul>
+                    <div class="h4 mt-3 mb-2"><i class="material-icons-two-tone text-primary">pin_drop</i> Address</div>
+                    <address class="p-l-30">
+                        638 Gateway Road,<br>
+                        Portland,<br>
+                        97217
+                    </address>
+                    <div class="h4 mt-3 mb-2"><i class="material-icons-two-tone text-primary">email</i> Email</div>
+                    <a class="link-secondary p-l-30" href="mailto:dummy@mail.com">dummy@mail.com</a>
+                </div>
+                <div class="col-sm-5">
+                    <iframe style="height:300px;width:100%;"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3718.9552617025997!2d72.86222981476695!3d21.23362258588772!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04f1c84348989%3A0xfb5817a0f069bfe5!2sPhoenixcoded!5e0!3m2!1sen!2sin!4v1602476754586!5m2!1sen!2sin"
+                        frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- [ contact ] end -->
+    <!-- [ Footer ] Start -->
+    <div class="footer-top"></div>
+    <footer class="bg-dark">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-lg-4">
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="#"><img src="assets/images/logo.svg" alt="logo"></a>
+                        </li>
+                        <li class="mt-3 mb-3">
+                            <p>Easy - Flexible - Always updated - makes Dashboard-kit a really powerful backend
+                                template.</p>
+                        </li>
+                        <li class="mt-3 mb-3 d-flex align-items-center">
+                            <div class="fas fa-headset me-2"></div><a class="d-inline-block"
+                                href="http://phoenixcoded.ticksy.com">Support by Ticksy</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <h5>Useful links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mt-2 mb-2"><a href="#" target="_blank">Rate Dashboard-kit</a></li>
+                        <li class="mt-2 mb-2"><a href="#" target="_blank">Collection</a></li>
+                        <li class="mt-2 mb-2"><a href="#" target="_blank">Themeforest Profile</a> </li>
+                        <li class="mt-2 mb-2"><a href="#" target="_blank">Portfolio</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <h5>Trending Items</h5>
+                    <ul class="list-unstyled">
+                        <li class="mt-2 mb-2"><a href="#" target="_blank" class="d-flex align-items-center">Able pro
+                                v7.0<span class="badge bg-danger ms-2">Hot</span></a> </li>
+                        <li class="mt-2 mb-2"><a href="#" target="_blank" class="d-flex align-items-center">Dash
+                                Able<span class="badge bg-primary ms-2">New</span></a> </li>
+                        <li class="mt-2 mb-2"><a href="#" target="_blank">Flat Able</a></li>
+                        <li class="mt-2 mb-2"><a href="#" target="_blank">Mega Able</a> </li>
+                    </ul>
+                    <h5 class="mt-4">Follow Us</h5>
+                    <ul class="list-inline list-unstyled sos-icon">
+                        <li><a href="#" target="_blank" class="btn-facebook"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="#" target="_blank" class="btn-twitter"><i class="fab fa-twitter"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container b-footer">
+            <p>© 2020 phoenixcoded. Exclusively on <a href="https://1.envato.market/DM91j"
+                    target="_blank">Themeforest</a></p>
+            <span class="bottom-tag">Phoenixcoded</span>
+        </div>
     </footer>
-    <!-- End Footer -->
+    <!-- [ Footer ] end -->
+    <!-- Required Js -->
+    <script src="assets/js/vendor-all.min.js"></script>
+    <script src="assets/js/plugins/bootstrap.min.js"></script>
+    
+    <script src="assets/front/wow.min.js"></script>
+
+    <script>
+        // Start [ Menu hide/show on scroll ]
+        var ost = 0;
+        $(window).scroll(function () {
+            var cOst = $(this).scrollTop();
+            if (cOst == 0) {
+                $('.navbar').addClass('top-nav-collapse');
+            } else if (cOst > ost) {
+                $('.navbar').addClass('top-nav-collapse').removeClass('default');
+            } else {
+                $('.navbar').addClass('default').removeClass('top-nav-collapse');
+            }
+            ost = cOst;
+        });
+        // End [ Menu hide/show on scroll ]
+        new WOW().init();
+        var scrollSpy = new bootstrap.ScrollSpy(document.body, {
+            target: '#navbarTogglerDemo01'
+        });
+        $("#navbarTogglerDemo01 a").on('click', function (event) {
+            if (this.hash !== "") {
+                event.preventDefault();
+                var hash = this.hash;
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                }, 1500, function () {
+                    window.location.hash = hash;
+                });
+            }
+        });
+    </script>
+    <div class="pct-customizer">
+        <div class="pct-c-btn">
+            <button class="btn btn-light-danger" id="pct-toggler">
+                <i data-feather="settings"></i>
+            </button>
+            <button class="btn btn-light-primary" data-bs-toggle="tooltip" title="Document" data-placement="left">
+                <i data-feather="book"></i>
+            </button>
+            <button class="btn btn-light-success" data-bs-toggle="tooltip" title="Buy Now" data-placement="left">
+                <i data-feather="shopping-bag"></i>
+            </button>
+            <button class="btn btn-light-info" data-bs-toggle="tooltip" title="Support" data-placement="left">
+                <i data-feather="headphones"></i>
+            </button>
+        </div>
+        <div class="pct-c-content ">
+            <div class="pct-header bg-primary">
+                <h5 class="mb-0 text-white f-w-500">DashboardKit Customizer</h5>
+            </div>
+            <div class="pct-body">
+                <h6 class="mt-2"><i data-feather="credit-card" class="me-2"></i>Header settings</h6>
+                <hr class="my-2">
+                <div class="theme-color header-color">
+                    <a href="#!" class="" data-value="bg-default"><span></span><span></span></a>
+                    <a href="#!" class="" data-value="bg-primary"><span></span><span></span></a>
+                    <a href="#!" class="" data-value="bg-danger"><span></span><span></span></a>
+                    <a href="#!" class="" data-value="bg-warning"><span></span><span></span></a>
+                    <a href="#!" class="" data-value="bg-info"><span></span><span></span></a>
+                    <a href="#!" class="" data-value="bg-success"><span></span><span></span></a>
+                    <a href="#!" class="" data-value="bg-dark"><span></span><span></span></a>
+                </div>
+                <h6 class="mt-4"><i data-feather="layout" class="me-2"></i>Sidebar settings</h6>
+                <hr class="my-2">
+                <div class="form-check form-switch">
+                    <input type="checkbox" class="form-check-input" id="cust-sidebar">
+                    <label class="form-check-label f-w-600 pl-1" for="cust-sidebar">Light Sidebar</label>
+                </div>
+                <div class="form-check form-switch mt-2">
+                    <input type="checkbox" class="form-check-input" id="cust-sidebrand">
+                    <label class="form-check-label f-w-600 pl-1" for="cust-sidebrand">Color Brand</label>
+                </div>
+                <div class="theme-color brand-color d-none">
+                    <a href="#!" class="active" data-value="bg-primary"><span></span><span></span></a>
+                    <a href="#!" class="" data-value="bg-danger"><span></span><span></span></a>
+                    <a href="#!" class="" data-value="bg-warning"><span></span><span></span></a>
+                    <a href="#!" class="" data-value="bg-info"><span></span><span></span></a>
+                    <a href="#!" class="" data-value="bg-success"><span></span><span></span></a>
+                    <a href="#!" class="" data-value="bg-dark"><span></span><span></span></a>
+                </div>
+                <h6 class="mt-4"><i data-feather="sun" class="me-2"></i>Layout settings</h6>
+                <hr class="my-2">
+                <div class="form-check form-switch mt-2">
+                    <input type="checkbox" class="form-check-input" id="cust-darklayout">
+                    <label class="form-check-label f-w-600 pl-1" for="cust-darklayout">Dark Layout</label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        feather.replace();
+        var pctoggle = document.querySelector("#pct-toggler");
+        if (pctoggle) {
+            pctoggle.addEventListener('click', function () {
+                if (!document.querySelector(".pct-customizer").classList.contains('active')) {
+                    document.querySelector(".pct-customizer").classList.add("active");
+                } else {
+                    document.querySelector(".pct-customizer").classList.remove("active");
+                }
+            });
+        }
+
+        var custsidebrand = document.querySelector("#cust-sidebrand");
+        custsidebrand.addEventListener('click', function () {
+            if (custsidebrand.checked) {
+                document.querySelector(".m-header").classList.add("bg-dark");
+                document.querySelector(".theme-color.brand-color").classList.remove("d-none");
+            } else {
+                removeClassByPrefix(document.querySelector(".m-header"), 'bg-');
+                // document.querySelector(".m-header > .b-brand > .logo-lg").setAttribute('src', 'assets/images/logo-dark.svg');
+                document.querySelector(".theme-color.brand-color").classList.add("d-none");
+            }
+        });
 
 
-    <!-- Back to top -->
-    <a href="#" id="back-to-top" title="Back to top"><i class="fa fa-angle-up"></i></a>
-    <!-- /Back to top -->
+        var brandcolor = document.querySelectorAll(".brand-color > a");
+        for (var t = 0; t < brandcolor.length; t++) {
+            var c = brandcolor[t];
+            c.addEventListener('click', function (event) {
+                var targetElement = event.target;
+                if (targetElement.tagName == "SPAN") {
+                    targetElement = targetElement.parentNode;
+                }
+                var temp = targetElement.getAttribute('data-value');
+                if (temp == "bg-default") {
+                    removeClassByPrefix(document.querySelector(".m-header"), 'bg-');
+                } else {
+                    removeClassByPrefix(document.querySelector(".m-header"), 'bg-');
+                    document.querySelector(".m-header > .b-brand > .logo-lg").setAttribute('src', 'assets/images/logo.svg');
+                    document.querySelector(".m-header").classList.add(temp);
+                }
+            });
+        }
 
-<%- include('./partials/frontend/scripts.ejs') %> 
+
+        var headercolor = document.querySelectorAll(".header-color > a");
+        for (var h = 0; h < headercolor.length; h++) {
+            var c = headercolor[h];
+
+            c.addEventListener('click', function (event) {
+                var targetElement = event.target;
+                if (targetElement.tagName == "SPAN") {
+                    targetElement = targetElement.parentNode;
+                }
+                var temp = targetElement.getAttribute('data-value');
+                if (temp == "bg-default") {
+                    removeClassByPrefix(document.querySelector(".pc-header:not(.pc-mob-header)"), 'bg-');
+                } else {
+                    removeClassByPrefix(document.querySelector(".pc-header:not(.pc-mob-header)"), 'bg-');
+                    document.querySelector(".pc-header:not(.pc-mob-header)").classList.add(temp);
+                }
+            });
+        }
+
+
+        var custside = document.querySelector("#cust-sidebar");
+        custside.addEventListener('click', function () {
+            if (custside.checked) {
+                document.querySelector(".pc-sidebar").classList.add("light-sidebar");
+                // document.querySelector(".pc-horizontal .topbar").classList.add("light-sidebar");
+            } else {
+                document.querySelector(".pc-sidebar").classList.remove("light-sidebar");
+                // document.querySelector(".pc-horizontal .topbar").classList.remove("light-sidebar");
+            }
+        });
+
+
+        var custdarklayout = document.querySelector("#cust-darklayout");
+        custdarklayout.addEventListener('click', function () {
+            if (custdarklayout.checked) {
+                document.querySelector("#main-style-link").setAttribute('href', 'assets/css/style-dark.css');
+            } else {
+                document.querySelector("#main-style-link").setAttribute('href', 'assets/css/style.css');
+            }
+        });
+        function removeClassByPrefix(node, prefix) {
+            for (let i = 0; i < node.classList.length; i++) {
+                let value = node.classList[i];
+                if (value.startsWith(prefix)) {
+                    node.classList.remove(value);
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
