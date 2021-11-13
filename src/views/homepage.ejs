@@ -1,86 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <title>DashboardKit Bootstrap 5 Admin Template</title>
-    <!-- HTML5 Shim and Respond.js IE11 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 11]>
-    	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    	<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    	<![endif]-->
-    <!-- Meta -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="description" content="DashboardKit is modern yet powerful Bootstrap 5 Admin Template comes with thousands of UI components & 180+ pages."/>
-    <meta name="keywords" content="DashboardKit, Dashboard Kit, Dashboard UI Kit, Bootstrap 5, Admin Template, Admin Dashboard, CRM, CMS, Free Bootstrap Admin Template"/>
-    <meta name="author" content="DashboardKit" />
-
-    <!-- Favicon icon -->
-    <link rel="icon" href="assets/images/favicon.svg" type="image/x-icon">
-
-    <link rel="stylesheet" href="assets/css/plugins/animate.min.css">
-    <!-- font css -->
-    <link rel="stylesheet" href="assets/fonts/tabler-icons.min.css">
-    <link rel="stylesheet" href="assets/fonts/feather.css">
-    <link rel="stylesheet" href="assets/fonts/fontawesome.css">
-    <link rel="stylesheet" href="assets/fonts/material.css">
-
-    <!-- vendor css -->
-    <link rel="stylesheet" href="assets/css/style.css" id="main-style-link">
-    <link rel="stylesheet" href="assets/css/customizer.css">
-    <link rel="stylesheet" href="assets/css/layout-horizontal.css">
-
-    <link rel="stylesheet" href="assets/css/landing.css">
-</head>
-
+<%- include('./partials/frontend/header.ejs') %> 
 <body>
     <!-- [ Nav ] start -->
-    <nav class="navbar navbar-expand-md navbar-dark default">
-        <div class="container">
-            <a class="navbar-brand" href="#">
-                <img src="assets/images/logo.svg" alt="logo">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01"
-                aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#home">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#features">Features</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#layouts">Layouts</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#testimonial">Testimonial</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#pricing">Pricing</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#faq">Faq</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact Us</a>
-                    </li>
-                </ul>
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="btn btn-primary my-1 me-2" href="#">Buy now</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="btn btn-secondary my-1" href="#">Demo</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+<%- include('./partials/frontend/navbar.ejs') %> 
+   
     <!-- [ Nav ] start -->
     <!-- [ Header ] start -->
     <header id="home">
@@ -99,7 +21,7 @@
                     </div>
                 </div>
                 <div class="col-sm-7">
-                    <img src="assets/front/header-mokeup.jpg" alt="Dashboard-kit Admin Template"
+                    <img src="/backend/assets/front/header-mokeup.jpg" alt="Dashboard-kit Admin Template"
                         class="img-fluid header-img wow fadeInRight" data-wow-delay="0.2s">
                 </div>
             </div>
@@ -179,7 +101,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="layout-block wow fadeInUp" data-wow-delay="0.2s">
                         <a href="#!" class="layout-img">
-                            <img src="assets/front/Layout-1.png" alt="" class="img-fluid">
+                            <img src="/backend/assets/front/Layout-1.png" alt="" class="img-fluid">
                             <span class="overlay-action">
                                 <i class="material-icons-two-tone">remove_red_eye</i>
                             </span>
@@ -192,7 +114,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="layout-block wow fadeInUp" data-wow-delay="0.4s">
                         <a href="#!" class="layout-img">
-                            <img src="assets/front/Layout-2.png" alt="" class="img-fluid">
+                            <img src="/backend/assets/front/Layout-2.png" alt="" class="img-fluid">
                             <span class="overlay-action">
                                 <i class="material-icons-two-tone">remove_red_eye</i>
                             </span>
@@ -205,7 +127,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="layout-block wow fadeInUp" data-wow-delay="0.6s">
                         <a href="#!" class="layout-img">
-                            <img src="assets/front/Layout-3.png" alt="" class="img-fluid">
+                            <img src="/backend/assets/front/Layout-3.png" alt="" class="img-fluid">
                             <span class="overlay-action">
                                 <i class="material-icons-two-tone">remove_red_eye</i>
                             </span>
@@ -218,7 +140,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="layout-block wow fadeInUp" data-wow-delay="0.2s">
                         <a href="#!" class="layout-img">
-                            <img src="assets/front/Layout-4.png" alt="" class="img-fluid">
+                            <img src="/backend/assets/front/Layout-4.png" alt="" class="img-fluid">
                             <span class="overlay-action">
                                 <i class="material-icons-two-tone">remove_red_eye</i>
                             </span>
@@ -231,7 +153,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="layout-block wow fadeInUp" data-wow-delay="0.4s">
                         <a href="#!" class="layout-img">
-                            <img src="assets/front/Layout-5.png" alt="" class="img-fluid">
+                            <img src="/backend/assets/front/Layout-5.png" alt="" class="img-fluid">
                             <span class="overlay-action">
                                 <i class="material-icons-two-tone">remove_red_eye</i>
                             </span>
@@ -306,7 +228,7 @@
                                                     <h6 class="mb-0">Mr. Joseph William</h6>
                                                     <span class="text-muted">Sr. developer</span>
                                                     <div class="test-img">
-                                                        <img src="assets/images/user/avatar-2.jpg" alt="user-image"
+                                                        <img src="/backend/assets/images/user/avatar-2.jpg" alt="user-image"
                                                             class="user-avtar">
                                                     </div>
                                                 </div>
@@ -327,7 +249,7 @@
                                                     <h6 class="mb-0">Mr. Joseph William</h6>
                                                     <span class="text-muted">Sr. developer</span>
                                                     <div class="test-img">
-                                                        <img src="assets/images/user/avatar-1.jpg" alt="user-image"
+                                                        <img src="/backend/assets/images/user/avatar-1.jpg" alt="user-image"
                                                             class="user-avtar">
                                                     </div>
                                                 </div>
@@ -352,7 +274,7 @@
                                                     <h6 class="mb-0">Mr. Joseph William</h6>
                                                     <span class="text-muted">Sr. developer</span>
                                                     <div class="test-img">
-                                                        <img src="assets/images/user/avatar-3.jpg" alt="user-image"
+                                                        <img src="/backend/assets/images/user/avatar-3.jpg" alt="user-image"
                                                             class="user-avtar">
                                                     </div>
                                                 </div>
@@ -373,7 +295,7 @@
                                                     <h6 class="mb-0">Mr. Joseph William</h6>
                                                     <span class="text-muted">Sr. developer</span>
                                                     <div class="test-img">
-                                                        <img src="assets/images/user/avatar-4.jpg" alt="user-image"
+                                                        <img src="/backend/assets/images/user/avatar-4.jpg" alt="user-image"
                                                             class="user-avtar">
                                                     </div>
                                                 </div>
@@ -398,7 +320,7 @@
                                                     <h6 class="mb-0">Mr. Joseph William</h6>
                                                     <span class="text-muted">Sr. developer</span>
                                                     <div class="test-img">
-                                                        <img src="assets/images/user/avatar-2.jpg" alt="user-image"
+                                                        <img src="/backend/assets/images/user/avatar-2.jpg" alt="user-image"
                                                             class="user-avtar">
                                                     </div>
                                                 </div>
@@ -419,7 +341,7 @@
                                                     <h6 class="mb-0">Mr. Joseph William</h6>
                                                     <span class="text-muted">Sr. developer</span>
                                                     <div class="test-img">
-                                                        <img src="assets/images/user/avatar-5.jpg" alt="user-image"
+                                                        <img src="/backend/assets/images/user/avatar-5.jpg" alt="user-image"
                                                             class="user-avtar">
                                                     </div>
                                                 </div>
@@ -653,249 +575,7 @@
     <!-- [ contact ] end -->
     <!-- [ Footer ] Start -->
     <div class="footer-top"></div>
-    <footer class="bg-dark">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 col-lg-4">
-                    <ul class="list-unstyled">
-                        <li>
-                            <a href="#"><img src="assets/images/logo.svg" alt="logo"></a>
-                        </li>
-                        <li class="mt-3 mb-3">
-                            <p>Easy - Flexible - Always updated - makes Dashboard-kit a really powerful backend
-                                template.</p>
-                        </li>
-                        <li class="mt-3 mb-3 d-flex align-items-center">
-                            <div class="fas fa-headset me-2"></div><a class="d-inline-block"
-                                href="http://phoenixcoded.ticksy.com">Support by Ticksy</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <h5>Useful links</h5>
-                    <ul class="list-unstyled">
-                        <li class="mt-2 mb-2"><a href="#" target="_blank">Rate Dashboard-kit</a></li>
-                        <li class="mt-2 mb-2"><a href="#" target="_blank">Collection</a></li>
-                        <li class="mt-2 mb-2"><a href="#" target="_blank">Themeforest Profile</a> </li>
-                        <li class="mt-2 mb-2"><a href="#" target="_blank">Portfolio</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <h5>Trending Items</h5>
-                    <ul class="list-unstyled">
-                        <li class="mt-2 mb-2"><a href="#" target="_blank" class="d-flex align-items-center">Able pro
-                                v7.0<span class="badge bg-danger ms-2">Hot</span></a> </li>
-                        <li class="mt-2 mb-2"><a href="#" target="_blank" class="d-flex align-items-center">Dash
-                                Able<span class="badge bg-primary ms-2">New</span></a> </li>
-                        <li class="mt-2 mb-2"><a href="#" target="_blank">Flat Able</a></li>
-                        <li class="mt-2 mb-2"><a href="#" target="_blank">Mega Able</a> </li>
-                    </ul>
-                    <h5 class="mt-4">Follow Us</h5>
-                    <ul class="list-inline list-unstyled sos-icon">
-                        <li><a href="#" target="_blank" class="btn-facebook"><i class="fab fa-facebook-f"></i></a></li>
-                        <li><a href="#" target="_blank" class="btn-twitter"><i class="fab fa-twitter"></i></a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="container b-footer">
-            <p>© 2020 phoenixcoded. Exclusively on <a href="https://1.envato.market/DM91j"
-                    target="_blank">Themeforest</a></p>
-            <span class="bottom-tag">Phoenixcoded</span>
-        </div>
-    </footer>
+    <%- include('./partials/frontend/footer.ejs') %> 
     <!-- [ Footer ] end -->
     <!-- Required Js -->
-    <script src="assets/js/vendor-all.min.js"></script>
-    <script src="assets/js/plugins/bootstrap.min.js"></script>
-    
-    <script src="assets/front/wow.min.js"></script>
-
-    <script>
-        // Start [ Menu hide/show on scroll ]
-        var ost = 0;
-        $(window).scroll(function () {
-            var cOst = $(this).scrollTop();
-            if (cOst == 0) {
-                $('.navbar').addClass('top-nav-collapse');
-            } else if (cOst > ost) {
-                $('.navbar').addClass('top-nav-collapse').removeClass('default');
-            } else {
-                $('.navbar').addClass('default').removeClass('top-nav-collapse');
-            }
-            ost = cOst;
-        });
-        // End [ Menu hide/show on scroll ]
-        new WOW().init();
-        var scrollSpy = new bootstrap.ScrollSpy(document.body, {
-            target: '#navbarTogglerDemo01'
-        });
-        $("#navbarTogglerDemo01 a").on('click', function (event) {
-            if (this.hash !== "") {
-                event.preventDefault();
-                var hash = this.hash;
-                $('html, body').animate({
-                    scrollTop: $(hash).offset().top
-                }, 1500, function () {
-                    window.location.hash = hash;
-                });
-            }
-        });
-    </script>
-    <div class="pct-customizer">
-        <div class="pct-c-btn">
-            <button class="btn btn-light-danger" id="pct-toggler">
-                <i data-feather="settings"></i>
-            </button>
-            <button class="btn btn-light-primary" data-bs-toggle="tooltip" title="Document" data-placement="left">
-                <i data-feather="book"></i>
-            </button>
-            <button class="btn btn-light-success" data-bs-toggle="tooltip" title="Buy Now" data-placement="left">
-                <i data-feather="shopping-bag"></i>
-            </button>
-            <button class="btn btn-light-info" data-bs-toggle="tooltip" title="Support" data-placement="left">
-                <i data-feather="headphones"></i>
-            </button>
-        </div>
-        <div class="pct-c-content ">
-            <div class="pct-header bg-primary">
-                <h5 class="mb-0 text-white f-w-500">DashboardKit Customizer</h5>
-            </div>
-            <div class="pct-body">
-                <h6 class="mt-2"><i data-feather="credit-card" class="me-2"></i>Header settings</h6>
-                <hr class="my-2">
-                <div class="theme-color header-color">
-                    <a href="#!" class="" data-value="bg-default"><span></span><span></span></a>
-                    <a href="#!" class="" data-value="bg-primary"><span></span><span></span></a>
-                    <a href="#!" class="" data-value="bg-danger"><span></span><span></span></a>
-                    <a href="#!" class="" data-value="bg-warning"><span></span><span></span></a>
-                    <a href="#!" class="" data-value="bg-info"><span></span><span></span></a>
-                    <a href="#!" class="" data-value="bg-success"><span></span><span></span></a>
-                    <a href="#!" class="" data-value="bg-dark"><span></span><span></span></a>
-                </div>
-                <h6 class="mt-4"><i data-feather="layout" class="me-2"></i>Sidebar settings</h6>
-                <hr class="my-2">
-                <div class="form-check form-switch">
-                    <input type="checkbox" class="form-check-input" id="cust-sidebar">
-                    <label class="form-check-label f-w-600 pl-1" for="cust-sidebar">Light Sidebar</label>
-                </div>
-                <div class="form-check form-switch mt-2">
-                    <input type="checkbox" class="form-check-input" id="cust-sidebrand">
-                    <label class="form-check-label f-w-600 pl-1" for="cust-sidebrand">Color Brand</label>
-                </div>
-                <div class="theme-color brand-color d-none">
-                    <a href="#!" class="active" data-value="bg-primary"><span></span><span></span></a>
-                    <a href="#!" class="" data-value="bg-danger"><span></span><span></span></a>
-                    <a href="#!" class="" data-value="bg-warning"><span></span><span></span></a>
-                    <a href="#!" class="" data-value="bg-info"><span></span><span></span></a>
-                    <a href="#!" class="" data-value="bg-success"><span></span><span></span></a>
-                    <a href="#!" class="" data-value="bg-dark"><span></span><span></span></a>
-                </div>
-                <h6 class="mt-4"><i data-feather="sun" class="me-2"></i>Layout settings</h6>
-                <hr class="my-2">
-                <div class="form-check form-switch mt-2">
-                    <input type="checkbox" class="form-check-input" id="cust-darklayout">
-                    <label class="form-check-label f-w-600 pl-1" for="cust-darklayout">Dark Layout</label>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <script>
-        feather.replace();
-        var pctoggle = document.querySelector("#pct-toggler");
-        if (pctoggle) {
-            pctoggle.addEventListener('click', function () {
-                if (!document.querySelector(".pct-customizer").classList.contains('active')) {
-                    document.querySelector(".pct-customizer").classList.add("active");
-                } else {
-                    document.querySelector(".pct-customizer").classList.remove("active");
-                }
-            });
-        }
-
-        var custsidebrand = document.querySelector("#cust-sidebrand");
-        custsidebrand.addEventListener('click', function () {
-            if (custsidebrand.checked) {
-                document.querySelector(".m-header").classList.add("bg-dark");
-                document.querySelector(".theme-color.brand-color").classList.remove("d-none");
-            } else {
-                removeClassByPrefix(document.querySelector(".m-header"), 'bg-');
-                // document.querySelector(".m-header > .b-brand > .logo-lg").setAttribute('src', 'assets/images/logo-dark.svg');
-                document.querySelector(".theme-color.brand-color").classList.add("d-none");
-            }
-        });
-
-
-        var brandcolor = document.querySelectorAll(".brand-color > a");
-        for (var t = 0; t < brandcolor.length; t++) {
-            var c = brandcolor[t];
-            c.addEventListener('click', function (event) {
-                var targetElement = event.target;
-                if (targetElement.tagName == "SPAN") {
-                    targetElement = targetElement.parentNode;
-                }
-                var temp = targetElement.getAttribute('data-value');
-                if (temp == "bg-default") {
-                    removeClassByPrefix(document.querySelector(".m-header"), 'bg-');
-                } else {
-                    removeClassByPrefix(document.querySelector(".m-header"), 'bg-');
-                    document.querySelector(".m-header > .b-brand > .logo-lg").setAttribute('src', 'assets/images/logo.svg');
-                    document.querySelector(".m-header").classList.add(temp);
-                }
-            });
-        }
-
-
-        var headercolor = document.querySelectorAll(".header-color > a");
-        for (var h = 0; h < headercolor.length; h++) {
-            var c = headercolor[h];
-
-            c.addEventListener('click', function (event) {
-                var targetElement = event.target;
-                if (targetElement.tagName == "SPAN") {
-                    targetElement = targetElement.parentNode;
-                }
-                var temp = targetElement.getAttribute('data-value');
-                if (temp == "bg-default") {
-                    removeClassByPrefix(document.querySelector(".pc-header:not(.pc-mob-header)"), 'bg-');
-                } else {
-                    removeClassByPrefix(document.querySelector(".pc-header:not(.pc-mob-header)"), 'bg-');
-                    document.querySelector(".pc-header:not(.pc-mob-header)").classList.add(temp);
-                }
-            });
-        }
-
-
-        var custside = document.querySelector("#cust-sidebar");
-        custside.addEventListener('click', function () {
-            if (custside.checked) {
-                document.querySelector(".pc-sidebar").classList.add("light-sidebar");
-                // document.querySelector(".pc-horizontal .topbar").classList.add("light-sidebar");
-            } else {
-                document.querySelector(".pc-sidebar").classList.remove("light-sidebar");
-                // document.querySelector(".pc-horizontal .topbar").classList.remove("light-sidebar");
-            }
-        });
-
-
-        var custdarklayout = document.querySelector("#cust-darklayout");
-        custdarklayout.addEventListener('click', function () {
-            if (custdarklayout.checked) {
-                document.querySelector("#main-style-link").setAttribute('href', 'assets/css/style-dark.css');
-            } else {
-                document.querySelector("#main-style-link").setAttribute('href', 'assets/css/style.css');
-            }
-        });
-        function removeClassByPrefix(node, prefix) {
-            for (let i = 0; i < node.classList.length; i++) {
-                let value = node.classList[i];
-                if (value.startsWith(prefix)) {
-                    node.classList.remove(value);
-                }
-            }
-        }
-    </script>
-</body>
-
-</html>
+<%- include('./partials/frontend/scripts.ejs') %> 
